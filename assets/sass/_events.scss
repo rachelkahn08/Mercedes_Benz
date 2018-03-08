@@ -1,0 +1,119 @@
+#events {
+	.section-header {
+		margin-bottom: -1.6375rem;
+	}
+
+	.section-footer {
+		z-index: 4;
+		margin-top: -1vw;
+	}
+}
+
+.section-list.section-list--events {
+	flex-direction: row;
+	justify-content: space-around;
+	padding: $xsBreakMobile;
+	position: relative;
+	flex-direction: row;
+	align-items: center;
+	min-width: min-content;
+	padding-left: 4vw;
+	overflow: hidden;
+
+	@include breakpoint(900px) {
+		padding-left: 2vw;
+		min-width: 0;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	li {
+		position: relative;
+		margin-right: 5vw;
+
+		@include breakpoint(900px) {
+			margin-right: 3vw;
+
+			&:nth-child(n+6) {
+				display: none;
+			}
+		}
+
+		figure {
+			@include smallContainer;
+			background-size: auto 110%;
+			background-position: top center;
+			color: $white;
+			text-shadow: 0 0 2px $darkBlue;
+			text-transform: uppercase;
+			font-weight: 800;
+			margin-top: $mediumBreakMobile;
+			@include bgImg('GraveDigger.jpg');
+		}
+
+		.small-gold-bar {
+			z-index: 3;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			color: $grey;
+			text-transform: capitalize;
+			
+			h2, date {
+				width: 100%;
+				height: 100%;
+				background-color: $gold;
+				padding: $smallBreakMobile;
+			}
+
+			date {
+				@include fontSize(xs);
+				padding-top: 0;
+				padding-bottom: 2vw;
+			}
+
+			h2 {
+				@include fontSize(sm);
+			}
+		}
+
+		&:nth-child(odd) {
+			.small-gold-bar {
+				text-align: right;
+				&:after {
+					transform-origin: 0;
+				}
+			}
+		}
+
+		&:first-child {
+			figure {
+				@include bgImg('stadiumwithfalcon.jpg');
+			}
+		}
+
+		&:nth-child(2) {
+			figure {
+				@include bgImg('KennyChesney.jpg');
+			}
+		}
+
+		&:nth-child(3) {
+			figure {
+				@include bgImg('stadiumfront.jpg');
+			}
+		}
+
+		&:last-child {
+			figure {
+				@include bgImg('GraveDigger.jpg');
+			}
+		}
+
+		&:nth-child(n+10) {
+			display: none;
+		}
+
+	}
+}

@@ -1,0 +1,104 @@
+
+
+
+
+
+
+// Footer Styling
+
+footer {
+  background: $darkblue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	color: $white;
+  margin-top: 15%;
+  padding: 15% 10%;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: 0;
+    right: 0;
+    background: $darkblue;
+    transform: skewY(2deg);
+    transform-origin: 100%;
+    z-index: -1;
+    border-top: 3px solid $darkred;
+  }
+
+  @media screen and (min-width: $sm-break) {
+   padding: 5% 10%;
+  }
+
+	.footer__text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+    justify-content: center;
+		align-items: center;
+
+		@media screen and (min-width: $sm-break) {
+			flex-direction: row;
+			align-items: flex-start;
+			flex-wrap: flex-wrap;
+		}
+
+		& a {
+			text-decoration: none;
+			@include fontSize(xs)
+			color: $white;
+		}
+
+		.mbs-logo__footer {
+			background-image: url(../../assets/img/mbs-logo.svg);
+			background-repeat: no-repeat;
+			width: 40%;
+			height: 120px;
+
+			@media screen and (min-width: $sm-break) {
+				width: 20%;
+			}
+		}
+
+		.sitemap,
+		.teams,
+		.social-media {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 2rem;
+			letter-spacing: 1px;
+			line-height: 1.5;
+
+		@media screen and (min-width: $sm-break) {
+			width: 25%;
+		}
+
+			& li {
+					width: 100%;
+					text-align: center;
+			}
+
+			& h3 {
+				z-index: 5;
+				margin-bottom: 1.5rem;
+				font-weight: bold;
+			}
+
+			& span {
+				margin-right: 2%;
+			}
+		}
+	}
+
+	.copyright {
+		font-size: .6rem;
+	}
+}

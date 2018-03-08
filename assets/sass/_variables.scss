@@ -1,0 +1,56 @@
+$white: #FEFEFE;
+$gold: #817246;
+$gray: #D5D5D5;
+$grey: #D5D5D5;
+
+$darkBlue: #001622;
+$lightBlue: #003950;
+
+$darkRed: #580614;
+$lightRed: #A61931;
+
+$sm-break: 630px;
+$med-break: 900px;
+$lg-break: 1000px;
+
+$smallGapVH: 1.506024096vh;
+$mediumGapVH: 2.259036145vh;
+$largeGapVH: 3.765060241vh;
+$xlGapVH: 7.530120482vh;
+
+$smallGapVW: 2.666666667vw;
+$mediumGapVW: 4vw;
+$largeGapVW: 6.666666667vw;
+$xlGapVW: 13.33333333vw;
+
+$smallGapVHTab: 0.9765625vh;
+$mediumGapVHTab: 1.46484375vh;
+$largeGapVHTab: 2.44140625vh;
+$xlGapVHTab: 4.8828125vh;
+
+$smallGapVWTab: 0.6510416667vw;
+$mediumGapVWTab: 1.953125vw;
+$largeGapVWTab: 3.255208333vw;
+$xlGapVWTab: 6.510416667vw;
+
+$xsBreakMobile: 0.234375rem;
+$smallBreakMobile: 0.46875rem;
+$mediumBreakMobile: 0.9375rem;
+$defaultBreakMobile: 1.40625rem;
+$largeBreakMobile: 2.109375rem;
+$xlBreakMobile: 3.1640625rem;
+$xxlBreakMobile: 5rem;
+
+$smallSkew: 2.3deg;
+$mediumSkew: 4deg;
+
+$thinBorder: 3px solid;
+$thickBorder: 4px solid;
+
+
+@font-face {
+	font-family: 'Korolev Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Korolev Light'), url('../../assets/font/KorolevLight.woff') format('woff');
+}

@@ -1,0 +1,19 @@
+.explore {
+	display: flex;
+	position: relative;
+	
+	
+	video {
+		width: 100%;
+		height: 56.5%;
+		position: relative;
+		max-height: 800px;
+		background-color: $darkBlue;
+	}
+
+	.large-gold-bar {
+		// @include largeGoldBar;
+		position: relative;
+		z-index: 2;
+	}
+}

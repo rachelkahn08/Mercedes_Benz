@@ -1,0 +1,67 @@
+.section-list {
+	&.section-list--news {
+		position: relative;
+		flex-direction: row;
+		align-items: center;
+		min-width: min-content;
+		padding-left: 4vw;
+
+		@include breakpoint(900px) {
+			min-width: 0;
+			flex-wrap: wrap;
+			padding-left: 2vw;
+			justify-content: center;
+			margin-bottom: -3vw;
+		}
+
+		li {
+			margin-right: 4vw;
+
+			&:nth-child(n+10) {
+				display: none;
+			}
+
+			@include breakpoint(600px) {
+				margin-right: 3vw;
+			}
+
+			@include breakpoint(900px) {
+				margin-right: 2vw;
+				margin-bottom: 3vw;
+
+				&:last-child {
+					align-self: flex-start;
+				}
+
+				&:nth-child(n+7) {
+					display: none;
+				}
+			}
+
+			figure {
+				h2 {
+					@include fontSize(md);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: $mediumBreakMobile;
+					text-align: center;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0, 0, 0, 0.1);
+					color: $grey;
+					text-transform: capitalize;
+					text-shadow: 0 0 5px black;
+					line-height: 2rem;
+					font-weight: 500;
+					// border: $thinBorder $darkRed;
+					// border-bottom: none;
+				}
+
+				@include mediumContainer;
+				@include bgImg("stadiumfront.jpg");
+				background-size: cover;	
+			}
+		}
+	}
+}

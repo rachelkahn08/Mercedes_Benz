@@ -1,0 +1,77 @@
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-color: $lightBlue;
+	font-family: 'Korolev Light';
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: $largeBreakMobile;
+	position: relative;
+
+	.scrollbox {
+		overflow-x: scroll;
+		width: 100%;
+	}
+
+	@include breakpoint(600px) {
+		margin-bottom: $xlGapVHTab;
+	}
+}
+
+main {
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: visible;
+}
+
+.section-header {
+	@include sectionHeader;
+}
+
+.section-footer {
+	@include sectionFooter;
+}
+
+.section-list {
+	// overflow-x: visible;
+}
+
+.font--xs {
+	@include fontSize(xs);
+	color: green;
+}
+
+.font--sm {
+	@include fontSize(sm);
+}
+
+.font--md {
+	@include fontSize(md);
+}
+
+.font--lg {
+	@include fontSize(lg);
+}
+
+.font--xl {
+	@include fontSize(xl);
+}
+
+.font--xxl {
+	@include fontSize(xxl);
+}
+
+.font--xxxl {
+	@include fontSize(xxxl);
+}

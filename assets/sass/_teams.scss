@@ -1,0 +1,307 @@
+.teams {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: $xxlBreakMobile;
+	position: relative;
+	color: $darkBlue;
+
+	.teams-section {
+		background-color: $grey;
+		width: 100%;
+		position: relative;
+		background-size: auto 95%;
+		background-repeat: no-repeat;
+		justify-content: flex-start;
+		padding: $mediumBreakMobile;
+		padding-bottom: 0;
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			display: flex;
+			text-transform: uppercase;
+			color: $grey;
+			width: 100%;
+			margin-top: (0 - $xlBreakMobile);
+
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0.9rem 0.6rem 0.5rem 0.65rem;
+				@include buttonShadow;
+				color: $darkBlue;
+				letter-spacing: 0.1rem;
+				@include fontSize(sm);
+
+				.teams-header {
+					@include fontSize(xxl);
+					font-weight: 800;
+					color: $grey;
+					letter-spacing: 0.2rem;
+					margin-top: $xsBreakMobile;
+				}
+
+				@include breakpoint(600px) {
+					min-width: 50%;
+				}
+			}
+
+			
+		}
+
+		.teams-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			margin: $mediumBreakMobile;
+
+			li {
+				margin-bottom: $largeBreakMobile;
+				display: flex;
+				flex-direction: column;
+
+
+				.main-copy {
+					@include fontSize(sm);
+				}
+
+				.teams-cta {
+					display: flex;
+					flex-direction: column;
+					margin-top: $xsBreakMobile * 2;
+
+					.teams-slogan {
+						@include fontSize(xl);
+						font-style: italic;
+						font-weight: 800;
+						padding: 0 0.1rem;
+					}
+				}
+
+				.next-game {
+					display: flex;
+					flex-direction: column;
+
+					span, date {
+						text-transform: uppercase;
+					}
+
+					span {	
+						@include fontSize(sm);
+						margin-bottom: $xsBreakMobile;
+
+						&:first-child {
+							display: flex;
+							align-items: center;
+							padding: 0.1rem;
+							padding-top: 0.25rem;
+							padding-bottom: 0;
+							margin-bottom: $smallBreakMobile;
+						}
+
+						&:nth-child(2) {
+							@include fontSize(xxxl);
+							font-weight: 800;
+							margin-bottom: 0;
+						}
+					}
+
+					date {
+						@include fontSize(xs)
+					}
+				}
+
+				button {
+					text-transform: uppercase;
+					color: $grey;
+					padding: 0.7rem;
+					padding-top: 0.9rem;
+					padding-bottom: 0.5rem;
+					@include fontSize(sm);
+					border-radius: 5px;
+					@include buttonShadow;
+				}
+
+				.main-copy {
+					width: 55%;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+
+					button {
+						background-color: $darkBlue;
+						color: $grey;
+						@include fontSize(sm);
+						@include buttonShadow;
+					}
+				}
+			}
+		}
+
+		&:before {
+			background-color: $grey;
+		}
+
+		&.teams-section__falcons {
+			margin-bottom: $xxlBreakMobile;
+			@include bgImg('hero_img_1.png');
+			background-position: 95% center;
+
+			h2 {
+
+				div {
+					background-color: $lightRed;	
+				}
+			}
+
+			.teams-text {
+
+				li {
+					align-items: flex-start;
+
+					div {
+						align-items: flex-start;
+
+						button {
+							background-color: $lightRed;
+						}
+					}
+
+					h3 {
+						align-items: flex-start;
+
+						span {
+							&:first-child {
+								border-left: $thinBorder $lightRed;
+								padding-left: $mediumBreakMobile;
+							}
+
+							&:nth-child(2) {
+								color: $lightRed;
+							}
+						}
+
+						date {
+							color: $lightRed;
+						}
+					}
+				}
+			}
+
+			&:before {
+				@include skew(-3deg);
+				transform-origin: 0;
+			}
+		}
+
+		&.teams-section__united {
+			@include bgImg('hero_img_2.png');
+			background-position: 5% center;
+			// flex-direction: row-reverse;
+
+			h2 {
+				flex-direction: row-reverse;
+
+				div {
+					background-color: $gold;
+					align-items: flex-end;	
+				}
+			}
+
+			.teams-text {
+
+				li {
+					align-items: flex-end;
+					text-align: right;
+
+					div {
+						align-items: flex-end;
+
+						button {
+							background-color: $gold;
+						}
+
+					}
+
+					h3 {
+						span {
+							&:first-child {
+								border-right: $thinBorder $gold;
+								padding-right: $mediumBreakMobile;
+							}
+
+							&:nth-child(2) {
+								color: $gold;
+							}
+						}
+
+						date {
+							color: $gold;
+						}
+					}
+				}
+			}
+
+			&:before {
+				@include skew(3deg);
+			}
+
+		}
+	}
+
+	@include breakpoint(600px) {
+		flex-direction: row-reverse;
+		@include bgImg('hourglass.svg');
+		background-repeat: no-repeat;
+		background-size: 135%;
+		background-position: center;
+		height: 700px;
+
+		.teams-section {
+			width: 50%;
+			min-height: 100%;
+			position: relative;
+			background-color: transparent;
+			padding: 0 $mediumBreakMobile;
+			justify-content: flex-start;
+
+			&:before {
+				display: none;
+			}
+
+			.teams-text {
+				justify-content: space-between;
+				height: 100%;
+				padding: 0;
+				margin-bottom: 0;
+				padding-bottom: $xlBreakMobile;
+				padding-top: 2rem;
+			}
+
+			&.teams-section__falcons {
+				background-size: auto 31.44rem;
+				background-position: 128% 70%;
+
+				.teams-text {
+
+				}
+
+			}
+
+			&.teams-section__united {
+				background-size: auto 29.44rem;
+				background-position: -25% 50%;
+			}
+
+			h2 {
+				margin-top: -12%;
+				margin-bottom: -12%;
+			}
+
+		}
+	}
+}

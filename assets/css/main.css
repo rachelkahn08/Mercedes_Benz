@@ -1,0 +1,1707 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  position: relative; }
+
+button {
+  appearance: none;
+  border: none;
+  background: none; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: inherit;
+    text-decoration: none; }
+
+@font-face {
+  font-family: 'Korolev Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Korolev Light"), url("../../assets/font/KorolevLight.woff") format("woff"); }
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+body {
+  background-color: #003950;
+  font-family: 'Korolev Light';
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.10938rem;
+  position: relative; }
+  section .scrollbox {
+    overflow-x: scroll;
+    width: 100%; }
+  @media screen and (min-width: 600px) {
+    section {
+      margin-bottom: 4.88281vh; } }
+
+main {
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: visible; }
+
+.section-header {
+  transform: rotate(-2deg);
+  margin-left: 0.9375rem;
+  margin-bottom: -0.9375rem;
+  z-index: 4;
+  color: #D5D5D5;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  background: #A61931;
+  padding: 0.65rem 0.55rem 0.5rem 0.55rem;
+  box-shadow: 1px 1px 3px #001622;
+  padding-bottom: 0.35rem;
+  text-shadow: 1.2px 1.5px 0 #001622; }
+  @media screen and (min-width: 0px) {
+    .section-header {
+      font-size: 1.22rem; } }
+  @media screen and (min-width: 375px) {
+    .section-header {
+      font-size: 1.3rem; } }
+  @media screen and (min-width: 500px) {
+    .section-header {
+      font-size: 1.4rem; } }
+  @media screen and (min-width: 625px) {
+    .section-header {
+      font-size: 1.48rem; } }
+  @media screen and (min-width: 750px) {
+    .section-header {
+      font-size: 1.57rem; } }
+  @media screen and (min-width: 875px) {
+    .section-header {
+      font-size: 1.67rem; } }
+  @media screen and (min-width: 1000px) {
+    .section-header {
+      font-size: 1.75rem; } }
+  @media screen and (min-width: 1125px) {
+    .section-header {
+      font-size: 1.84rem; } }
+  @media screen and (min-width: 1250px) {
+    .section-header {
+      font-size: 1.94rem; } }
+  @media screen and (min-width: 900px) {
+    .section-header {
+      margin-left: 4vw; } }
+  @media screen and (min-width: 1300px) {
+    .section-header {
+      margin-left: 6vw; } }
+
+.section-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: -0.9375rem;
+  text-shadow: 1.2px 1.5px 0 #001622; }
+  @media screen and (min-width: 0px) {
+    .section-footer {
+      font-size: 0.94rem; } }
+  @media screen and (min-width: 375px) {
+    .section-footer {
+      font-size: 1.01rem; } }
+  @media screen and (min-width: 500px) {
+    .section-footer {
+      font-size: 1.08rem; } }
+  @media screen and (min-width: 625px) {
+    .section-footer {
+      font-size: 1.15rem; } }
+  @media screen and (min-width: 750px) {
+    .section-footer {
+      font-size: 1.22rem; } }
+  @media screen and (min-width: 875px) {
+    .section-footer {
+      font-size: 1.29rem; } }
+  @media screen and (min-width: 1000px) {
+    .section-footer {
+      font-size: 1.36rem; } }
+  @media screen and (min-width: 1125px) {
+    .section-footer {
+      font-size: 1.43rem; } }
+  @media screen and (min-width: 1250px) {
+    .section-footer {
+      font-size: 1.5rem; } }
+  .section-footer span {
+    z-index: 4;
+    color: #D5D5D5;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    background: #A61931;
+    padding: 0.65rem 0.55rem 0.5rem 0.55rem;
+    box-shadow: 1px 1px 3px #001622;
+    padding-top: 0.9rem;
+    margin-right: 0.9375rem;
+    border-radius: 0.2rem; }
+    @media screen and (min-width: 900px) {
+      .section-footer span {
+        margin-right: 4vw; } }
+    @media screen and (min-width: 1300px) {
+      .section-footer span {
+        margin-right: 6vw; } }
+
+.font--xs {
+  color: green; }
+  @media screen and (min-width: 0px) {
+    .font--xs {
+      font-size: 0.68rem; } }
+  @media screen and (min-width: 375px) {
+    .font--xs {
+      font-size: 0.72rem; } }
+  @media screen and (min-width: 500px) {
+    .font--xs {
+      font-size: 0.78rem; } }
+  @media screen and (min-width: 625px) {
+    .font--xs {
+      font-size: 0.82rem; } }
+  @media screen and (min-width: 750px) {
+    .font--xs {
+      font-size: 0.88rem; } }
+  @media screen and (min-width: 875px) {
+    .font--xs {
+      font-size: 0.93rem; } }
+  @media screen and (min-width: 1000px) {
+    .font--xs {
+      font-size: 0.97rem; } }
+  @media screen and (min-width: 1125px) {
+    .font--xs {
+      font-size: 1.02rem; } }
+  @media screen and (min-width: 1250px) {
+    .font--xs {
+      font-size: 1.07rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--sm {
+    font-size: 0.94rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--sm {
+    font-size: 1.01rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--sm {
+    font-size: 1.08rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--sm {
+    font-size: 1.15rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--sm {
+    font-size: 1.22rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--sm {
+    font-size: 1.29rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--sm {
+    font-size: 1.36rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--sm {
+    font-size: 1.43rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--sm {
+    font-size: 1.5rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--md {
+    font-size: 1.08rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--md {
+    font-size: 1.16rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--md {
+    font-size: 1.24rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--md {
+    font-size: 1.32rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--md {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--md {
+    font-size: 1.48rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--md {
+    font-size: 1.56rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--md {
+    font-size: 1.64rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--md {
+    font-size: 1.72rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--lg {
+    font-size: 1.22rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--lg {
+    font-size: 1.3rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--lg {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--lg {
+    font-size: 1.48rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--lg {
+    font-size: 1.57rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--lg {
+    font-size: 1.67rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--lg {
+    font-size: 1.75rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--lg {
+    font-size: 1.84rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--lg {
+    font-size: 1.94rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--xl {
+    font-size: 1.35rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--xl {
+    font-size: 1.45rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--xl {
+    font-size: 1.55rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--xl {
+    font-size: 1.65rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--xl {
+    font-size: 1.75rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--xl {
+    font-size: 1.85rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--xl {
+    font-size: 1.95rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--xl {
+    font-size: 2.05rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--xl {
+    font-size: 2.15rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--xxl {
+    font-size: 1.49rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--xxl {
+    font-size: 1.59rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--xxl {
+    font-size: 1.71rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--xxl {
+    font-size: 1.81rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--xxl {
+    font-size: 1.93rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--xxl {
+    font-size: 2.04rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--xxl {
+    font-size: 2.15rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--xxl {
+    font-size: 2.25rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--xxl {
+    font-size: 2.37rem; } }
+
+@media screen and (min-width: 0px) {
+  .font--xxxl {
+    font-size: 2.7rem; } }
+
+@media screen and (min-width: 375px) {
+  .font--xxxl {
+    font-size: 2.9rem; } }
+
+@media screen and (min-width: 500px) {
+  .font--xxxl {
+    font-size: 3.1rem; } }
+
+@media screen and (min-width: 625px) {
+  .font--xxxl {
+    font-size: 3.3rem; } }
+
+@media screen and (min-width: 750px) {
+  .font--xxxl {
+    font-size: 3.5rem; } }
+
+@media screen and (min-width: 875px) {
+  .font--xxxl {
+    font-size: 3.7rem; } }
+
+@media screen and (min-width: 1000px) {
+  .font--xxxl {
+    font-size: 3.9rem; } }
+
+@media screen and (min-width: 1125px) {
+  .font--xxxl {
+    font-size: 4.1rem; } }
+
+@media screen and (min-width: 1250px) {
+  .font--xxxl {
+    font-size: 4.3rem; } }
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  padding: 0.9375rem;
+  padding-bottom: 0.46875rem;
+  justify-content: space-between;
+  background-color: #001622; }
+  header .box-shadow {
+    display: none; }
+  header:after {
+    background-color: #001622;
+    border-bottom: 3px solid #580614;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform-origin: 100%;
+    z-index: 9;
+    box-shadow: 4px 1px 10px #001622; }
+    @media screen and (min-width: 725px) {
+      header:after {
+        box-shadow: none;
+        bottom: -3px; } }
+  @media screen and (min-width: 725px) {
+    header {
+      flex-direction: row;
+      padding: 0;
+      align-items: stretch; }
+      header:before {
+        background-color: #001622;
+        border-bottom: 3px solid #580614;
+        transform-origin: 0;
+        position: absolute;
+        content: '';
+        transform: rotate(-13deg) translate(-50%);
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        top: 100%; } }
+    @media screen and (min-width: 725px) and (min-width: 1300px) {
+      header:before {
+        height: 130%; } }
+  @media screen and (min-width: 725px) {
+      header:after {
+        transform: none;
+        z-index: -2; }
+      header .box-shadow {
+        display: flex;
+        position: absolute;
+        z-index: -3;
+        height: 100%;
+        width: 100%;
+        box-shadow: 4px 1px 10px #001622;
+        transform: translate(0px, 3px); }
+        header .box-shadow:before {
+          z-index: -4;
+          transform-origin: 0;
+          position: absolute;
+          content: '';
+          transform: rotate(-13deg) translate(-50%);
+          height: 100%;
+          width: 100%;
+          top: 100%;
+          box-shadow: 3px 1px 10px #001622; } }
+      @media screen and (min-width: 725px) and (min-width: 1300px) {
+        header .box-shadow:before {
+          height: 130%; } }
+  header .header__logo {
+    background-image: url("../img/mbs-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 12vw;
+    min-width: 60px;
+    max-width: 130px;
+    height: 6vw;
+    min-height: 30px;
+    max-height: 65px;
+    z-index: 11; }
+    @media screen and (min-width: 725px) {
+      header .header__logo {
+        margin: 1vw 1.5vw;
+        margin-bottom: -1.75vw; } }
+    @media screen and (min-width: 1000px) {
+      header .header__logo {
+        margin: 0.75vw 1vw;
+        margin-bottom: -1.5vw; } }
+  header .hamburger__button {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 11;
+    width: 40px; }
+    @media screen and (min-width: 500px) {
+      header .hamburger__button {
+        width: 50px; } }
+    @media screen and (min-width: 600px) {
+      header .hamburger__button {
+        width: 60px; } }
+    @media screen and (min-width: 725px) {
+      header .hamburger__button {
+        display: none; } }
+    header .hamburger__button .hamburger-line {
+      background: #A61931;
+      height: 5px;
+      margin: 2px 0; }
+      header .hamburger__button .hamburger-line:first-child {
+        margin-top: 0; }
+      @media screen and (min-width: 500px) {
+        header .hamburger__button .hamburger-line {
+          height: 6px;
+          margin: 3px 0; } }
+      @media screen and (min-width: 600px) {
+        header .hamburger__button .hamburger-line {
+          height: 7px;
+          margin: 4px 0; } }
+    header .hamburger__button p {
+      color: #FEFEFE;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 0.55rem;
+      letter-spacing: 3px;
+      margin-top: 5px;
+      padding-left: 3px; }
+      @media screen and (min-width: 500px) {
+        header .hamburger__button p {
+          font-size: 0.65rem;
+          letter-spacing: 3.5px; } }
+      @media screen and (min-width: 600px) {
+        header .hamburger__button p {
+          font-size: 0.75rem;
+          letter-spacing: 4px; } }
+  header .header__nav {
+    padding-top: 65px;
+    padding-bottom: 35px;
+    position: absolute;
+    border-bottom: 1px solid green;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+    background-color: #001622; }
+    header .header__nav li {
+      display: flex;
+      margin: 0px 20px;
+      color: #FEFEFE;
+      border-bottom: 1px solid #D5D5D5;
+      text-transform: uppercase;
+      height: 100%; }
+      @media screen and (min-width: 725px) {
+        header .header__nav li {
+          margin: 0; } }
+      header .header__nav li a {
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-bottom: 5px; }
+      header .header__nav li:first-child {
+        margin-top: 25px; }
+        @media screen and (min-width: 725px) {
+          header .header__nav li:first-child {
+            margin-top: 0; } }
+    header .header__nav.hidden {
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden; }
+      @media screen and (min-width: 725px) {
+        header .header__nav.hidden {
+          transform: none;
+          opacity: 1;
+          visibility: initial; } }
+    @media screen and (min-width: 725px) {
+      header .header__nav {
+        z-index: 12;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: stretch;
+        align-items: stretch;
+        border: none; }
+        header .header__nav li {
+          margin: 0;
+          margin-top: 0;
+          padding: 0;
+          flex-grow: 1;
+          top: 0;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          header .header__nav li a {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center; } }
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; }
+  .section-list .section-list__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 0;
+    position: relative; }
+    .section-list .section-list__page .small-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3;
+      min-height: min-content; }
+      .section-list .section-list__page .small-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(-3deg);
+        z-index: -1; }
+      .section-list .section-list__page .small-gold-bar:before {
+        transform-origin: 0%;
+        box-shadow: 0px -3px 5px 0px rgba(0, 22, 34, 0.2); }
+    .section-list .section-list__page .medium-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3;
+      height: 8%; }
+      .section-list .section-list__page .medium-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(-3deg);
+        z-index: -1; }
+      .section-list .section-list__page .medium-gold-bar:before {
+        box-shadow: 0px -3px 2px -1px rgba(0, 22, 34, 0.4);
+        transform-origin: 0%; }
+    .section-list .section-list__page .large-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3; }
+      .section-list .section-list__page .large-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(-3deg);
+        z-index: -1; }
+      .section-list .section-list__page .large-gold-bar:before {
+        box-shadow: 0px -3px 5px 0px #001622;
+        transform-origin: 0%; }
+    .section-list .section-list__page:nth-child(even) .small-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3; }
+      .section-list .section-list__page:nth-child(even) .small-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(3deg);
+        z-index: -1; }
+    .section-list .section-list__page:nth-child(even) .medium-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3; }
+      .section-list .section-list__page:nth-child(even) .medium-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(3deg);
+        z-index: -1; }
+    .section-list .section-list__page:nth-child(even) .large-gold-bar {
+      background-color: #817246;
+      width: 102%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 3; }
+      .section-list .section-list__page:nth-child(even) .large-gold-bar:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 100%;
+        background-color: #817246;
+        content: '';
+        transform: skewY(3deg);
+        z-index: -1; }
+
+.section-list--hero {
+  margin-top: 12vw;
+  display: flex;
+  justify-content: flex-end;
+  overflow-y: hidden; }
+  @media screen and (min-width: 600px) {
+    .section-list--hero {
+      margin-top: 40px; } }
+  .section-list--hero .section-list__img {
+    height: 100vw;
+    width: 100%;
+    max-height: 700px;
+    background-image: url("../img/slideshow/falcons.jpg");
+    background-size: cover;
+    background-position: top center; }
+    @media screen and (min-width: 600px) {
+      .section-list--hero .section-list__img {
+        background-position: 50% 20%; } }
+  .section-list--hero .section-list__page {
+    position: relative;
+    justify-content: stretch;
+    align-items: stretch; }
+    .section-list--hero .section-list__page .hero__text {
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      z-index: 1;
+      position: relative; }
+      .section-list--hero .section-list__page .hero__text .hero__text--text {
+        display: flex;
+        flex-direction: column;
+        padding: 4vw 0vw 6vw 6vw;
+        justify-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        background-color: #001622;
+        color: #D5D5D5;
+        border-bottom: 3px solid #580614;
+        font-weight: 100; }
+        @media screen and (min-width: 500px) {
+          .section-list--hero .section-list__page .hero__text .hero__text--text {
+            padding: 2vw 0vw 4vw 4vw; } }
+        @media screen and (min-width: 600px) {
+          .section-list--hero .section-list__page .hero__text .hero__text--text {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; } }
+        @media screen and (min-width: 725px) {
+          .section-list--hero .section-list__page .hero__text .hero__text--text {
+            padding: 2vw;
+            justify-content: space-around; } }
+        @media screen and (min-width: 900px) {
+          .section-list--hero .section-list__page .hero__text .hero__text--text {
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: stretch;
+            padding: 1vw;
+            padding-bottom: 2vw;
+            padding-top: 0;
+            text-align: right; } }
+        .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 4vw; }
+          @media screen and (min-width: 500px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
+              margin-bottom: 3vw; } }
+          @media screen and (min-width: 600px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
+              margin-bottom: 0; } }
+          @media screen and (min-width: 900px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
+              margin: 0;
+              align-items: flex-end;
+              margin-bottom: -4vw;
+              transform: translateY(-4vw); } }
+          @media screen and (min-width: 1300px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
+              transform: translateY(-6vw);
+              margin-bottom: -6vw; } }
+          .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+            margin-bottom: 1vw;
+            margin-top: -2vw; }
+            @media screen and (min-width: 0px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.35rem; } }
+            @media screen and (min-width: 375px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.45rem; } }
+            @media screen and (min-width: 500px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.55rem; } }
+            @media screen and (min-width: 625px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.65rem; } }
+            @media screen and (min-width: 750px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.75rem; } }
+            @media screen and (min-width: 875px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.85rem; } }
+            @media screen and (min-width: 1000px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 1.95rem; } }
+            @media screen and (min-width: 1125px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 2.05rem; } }
+            @media screen and (min-width: 1250px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                font-size: 2.15rem; } }
+            @media screen and (min-width: 725px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                margin-top: 0;
+                margin-bottom: 0.5vw; } }
+            @media screen and (min-width: 900px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
+                margin-bottom: 0.25vw; } }
+          @media screen and (min-width: 0px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 0.94rem; } }
+          @media screen and (min-width: 375px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.01rem; } }
+          @media screen and (min-width: 500px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.08rem; } }
+          @media screen and (min-width: 625px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.15rem; } }
+          @media screen and (min-width: 750px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.22rem; } }
+          @media screen and (min-width: 875px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.29rem; } }
+          @media screen and (min-width: 1000px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.36rem; } }
+          @media screen and (min-width: 1125px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.43rem; } }
+          @media screen and (min-width: 1250px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              font-size: 1.5rem; } }
+          @media screen and (min-width: 900px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+              margin-right: 0.5vw; } }
+        .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: stretch;
+          align-items: center;
+          text-transform: uppercase; }
+          @media screen and (min-width: 900px) {
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links {
+              margin-top: 2vw; } }
+          .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li {
+            margin-right: 5vw;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: stretch;
+            align-items: center;
+            text-transform: uppercase; }
+            @media screen and (min-width: 900px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li {
+                margin-right: 0;
+                margin-left: 5vw; } }
+            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+              border-bottom: 4px solid #A61931; }
+              @media screen and (min-width: 0px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.08rem; } }
+              @media screen and (min-width: 375px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.16rem; } }
+              @media screen and (min-width: 500px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.24rem; } }
+              @media screen and (min-width: 625px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.32rem; } }
+              @media screen and (min-width: 750px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.4rem; } }
+              @media screen and (min-width: 875px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.48rem; } }
+              @media screen and (min-width: 1000px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.56rem; } }
+              @media screen and (min-width: 1125px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.64rem; } }
+              @media screen and (min-width: 1250px) {
+                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+                  font-size: 1.72rem; } }
+      .section-list--hero .section-list__page .hero__text .hero__angles {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+        .section-list--hero .section-list__page .hero__text .hero__angles:before {
+          content: '';
+          background-color: #001622;
+          width: 100%;
+          transform: skewY(3deg);
+          transform-origin: 100%;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
+          border-top: 3px solid #580614;
+          border-bottom: 3px solid #580614;
+          top: -3px;
+          z-index: -2; }
+          @media screen and (min-width: 725px) {
+            .section-list--hero .section-list__page .hero__text .hero__angles:before {
+              transform: none; } }
+        .section-list--hero .section-list__page .hero__text .hero__angles:after {
+          display: none; }
+          @media screen and (min-width: 725px) {
+            .section-list--hero .section-list__page .hero__text .hero__angles:after {
+              display: block;
+              top: -5px;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              content: '';
+              position: absolute;
+              background-color: #001622;
+              border-top: 3px solid #580614;
+              z-index: -1;
+              transform: translateX(70%) rotate(-12deg);
+              transform-origin: 0%;
+              height: 200%; } }
+          @media screen and (min-width: 900px) {
+            .section-list--hero .section-list__page .hero__text .hero__angles:after {
+              transform: translateX(40%) rotate(-12deg);
+              height: 1000%; } }
+
+.section-list.section-list--news {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  min-width: min-content;
+  padding-left: 4vw; }
+  @media screen and (min-width: 900px) {
+    .section-list.section-list--news {
+      min-width: 0;
+      flex-wrap: wrap;
+      padding-left: 2vw;
+      justify-content: center;
+      margin-bottom: -3vw; } }
+  .section-list.section-list--news li {
+    margin-right: 4vw; }
+    .section-list.section-list--news li:nth-child(n+10) {
+      display: none; }
+    @media screen and (min-width: 600px) {
+      .section-list.section-list--news li {
+        margin-right: 3vw; } }
+    @media screen and (min-width: 900px) {
+      .section-list.section-list--news li {
+        margin-right: 2vw;
+        margin-bottom: 3vw; }
+        .section-list.section-list--news li:last-child {
+          align-self: flex-start; }
+        .section-list.section-list--news li:nth-child(n+7) {
+          display: none; } }
+    .section-list.section-list--news li figure {
+      height: 70vw;
+      width: 77vw;
+      max-height: 300px;
+      max-width: 400px;
+      background-image: url("../img/stadiumfront.jpg");
+      background-size: cover; }
+      .section-list.section-list--news li figure h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.9375rem;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #D5D5D5;
+        text-transform: capitalize;
+        text-shadow: 0 0 5px black;
+        line-height: 2rem;
+        font-weight: 500; }
+        @media screen and (min-width: 0px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.08rem; } }
+        @media screen and (min-width: 375px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.16rem; } }
+        @media screen and (min-width: 500px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.24rem; } }
+        @media screen and (min-width: 625px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.32rem; } }
+        @media screen and (min-width: 750px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.4rem; } }
+        @media screen and (min-width: 875px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.48rem; } }
+        @media screen and (min-width: 1000px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.56rem; } }
+        @media screen and (min-width: 1125px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.64rem; } }
+        @media screen and (min-width: 1250px) {
+          .section-list.section-list--news li figure h2 {
+            font-size: 1.72rem; } }
+      @media screen and (min-width: 900px) {
+        .section-list.section-list--news li figure {
+          width: 30vw; } }
+
+.explore {
+  display: flex;
+  position: relative; }
+  .explore video {
+    width: 100%;
+    height: 56.5%;
+    position: relative;
+    max-height: 800px;
+    background-color: #001622; }
+  .explore .large-gold-bar {
+    position: relative;
+    z-index: 2; }
+
+.teams {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  position: relative;
+  color: #001622; }
+  .teams .teams-section {
+    background-color: #D5D5D5;
+    width: 100%;
+    position: relative;
+    background-size: auto 95%;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    padding: 0.9375rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column; }
+    .teams .teams-section h2 {
+      display: flex;
+      text-transform: uppercase;
+      color: #D5D5D5;
+      width: 100%;
+      margin-top: -3.16406rem; }
+      .teams .teams-section h2 div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.9rem 0.6rem 0.5rem 0.65rem;
+        box-shadow: 1px 1px 3px #001622;
+        color: #001622;
+        letter-spacing: 0.1rem; }
+        @media screen and (min-width: 0px) {
+          .teams .teams-section h2 div {
+            font-size: 0.94rem; } }
+        @media screen and (min-width: 375px) {
+          .teams .teams-section h2 div {
+            font-size: 1.01rem; } }
+        @media screen and (min-width: 500px) {
+          .teams .teams-section h2 div {
+            font-size: 1.08rem; } }
+        @media screen and (min-width: 625px) {
+          .teams .teams-section h2 div {
+            font-size: 1.15rem; } }
+        @media screen and (min-width: 750px) {
+          .teams .teams-section h2 div {
+            font-size: 1.22rem; } }
+        @media screen and (min-width: 875px) {
+          .teams .teams-section h2 div {
+            font-size: 1.29rem; } }
+        @media screen and (min-width: 1000px) {
+          .teams .teams-section h2 div {
+            font-size: 1.36rem; } }
+        @media screen and (min-width: 1125px) {
+          .teams .teams-section h2 div {
+            font-size: 1.43rem; } }
+        @media screen and (min-width: 1250px) {
+          .teams .teams-section h2 div {
+            font-size: 1.5rem; } }
+        .teams .teams-section h2 div .teams-header {
+          font-weight: 800;
+          color: #D5D5D5;
+          letter-spacing: 0.2rem;
+          margin-top: 0.23438rem; }
+          @media screen and (min-width: 0px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 1.49rem; } }
+          @media screen and (min-width: 375px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 1.59rem; } }
+          @media screen and (min-width: 500px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 1.71rem; } }
+          @media screen and (min-width: 625px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 1.81rem; } }
+          @media screen and (min-width: 750px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 1.93rem; } }
+          @media screen and (min-width: 875px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 2.04rem; } }
+          @media screen and (min-width: 1000px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 2.15rem; } }
+          @media screen and (min-width: 1125px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 2.25rem; } }
+          @media screen and (min-width: 1250px) {
+            .teams .teams-section h2 div .teams-header {
+              font-size: 2.37rem; } }
+        @media screen and (min-width: 600px) {
+          .teams .teams-section h2 div {
+            min-width: 50%; } }
+    .teams .teams-section .teams-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0.9375rem; }
+      .teams .teams-section .teams-text li {
+        margin-bottom: 2.10938rem;
+        display: flex;
+        flex-direction: column; }
+        @media screen and (min-width: 0px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 0.94rem; } }
+        @media screen and (min-width: 375px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.01rem; } }
+        @media screen and (min-width: 500px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.08rem; } }
+        @media screen and (min-width: 625px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.15rem; } }
+        @media screen and (min-width: 750px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.22rem; } }
+        @media screen and (min-width: 875px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.29rem; } }
+        @media screen and (min-width: 1000px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.36rem; } }
+        @media screen and (min-width: 1125px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.43rem; } }
+        @media screen and (min-width: 1250px) {
+          .teams .teams-section .teams-text li .main-copy {
+            font-size: 1.5rem; } }
+        .teams .teams-section .teams-text li .teams-cta {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.46875rem; }
+          .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+            font-style: italic;
+            font-weight: 800;
+            padding: 0 0.1rem; }
+            @media screen and (min-width: 0px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.35rem; } }
+            @media screen and (min-width: 375px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.45rem; } }
+            @media screen and (min-width: 500px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.55rem; } }
+            @media screen and (min-width: 625px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.65rem; } }
+            @media screen and (min-width: 750px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.75rem; } }
+            @media screen and (min-width: 875px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.85rem; } }
+            @media screen and (min-width: 1000px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 1.95rem; } }
+            @media screen and (min-width: 1125px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 2.05rem; } }
+            @media screen and (min-width: 1250px) {
+              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
+                font-size: 2.15rem; } }
+        .teams .teams-section .teams-text li .next-game {
+          display: flex;
+          flex-direction: column; }
+          .teams .teams-section .teams-text li .next-game span, .teams .teams-section .teams-text li .next-game date {
+            text-transform: uppercase; }
+          .teams .teams-section .teams-text li .next-game span {
+            margin-bottom: 0.23438rem; }
+            @media screen and (min-width: 0px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 0.94rem; } }
+            @media screen and (min-width: 375px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.01rem; } }
+            @media screen and (min-width: 500px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.08rem; } }
+            @media screen and (min-width: 625px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.15rem; } }
+            @media screen and (min-width: 750px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.22rem; } }
+            @media screen and (min-width: 875px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.29rem; } }
+            @media screen and (min-width: 1000px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.36rem; } }
+            @media screen and (min-width: 1125px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.43rem; } }
+            @media screen and (min-width: 1250px) {
+              .teams .teams-section .teams-text li .next-game span {
+                font-size: 1.5rem; } }
+            .teams .teams-section .teams-text li .next-game span:first-child {
+              display: flex;
+              align-items: center;
+              padding: 0.1rem;
+              padding-top: 0.25rem;
+              padding-bottom: 0;
+              margin-bottom: 0.46875rem; }
+            .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+              font-weight: 800;
+              margin-bottom: 0; }
+              @media screen and (min-width: 0px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 2.7rem; } }
+              @media screen and (min-width: 375px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 2.9rem; } }
+              @media screen and (min-width: 500px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 3.1rem; } }
+              @media screen and (min-width: 625px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 3.3rem; } }
+              @media screen and (min-width: 750px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 3.5rem; } }
+              @media screen and (min-width: 875px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 3.7rem; } }
+              @media screen and (min-width: 1000px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 3.9rem; } }
+              @media screen and (min-width: 1125px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 4.1rem; } }
+              @media screen and (min-width: 1250px) {
+                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
+                  font-size: 4.3rem; } }
+          @media screen and (min-width: 0px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.68rem; } }
+          @media screen and (min-width: 375px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.72rem; } }
+          @media screen and (min-width: 500px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.78rem; } }
+          @media screen and (min-width: 625px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.82rem; } }
+          @media screen and (min-width: 750px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.88rem; } }
+          @media screen and (min-width: 875px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.93rem; } }
+          @media screen and (min-width: 1000px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 0.97rem; } }
+          @media screen and (min-width: 1125px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 1.02rem; } }
+          @media screen and (min-width: 1250px) {
+            .teams .teams-section .teams-text li .next-game date {
+              font-size: 1.07rem; } }
+        .teams .teams-section .teams-text li button {
+          text-transform: uppercase;
+          color: #D5D5D5;
+          padding: 0.7rem;
+          padding-top: 0.9rem;
+          padding-bottom: 0.5rem;
+          border-radius: 5px;
+          box-shadow: 1px 1px 3px #001622; }
+          @media screen and (min-width: 0px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 0.94rem; } }
+          @media screen and (min-width: 375px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.01rem; } }
+          @media screen and (min-width: 500px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.08rem; } }
+          @media screen and (min-width: 625px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.15rem; } }
+          @media screen and (min-width: 750px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.22rem; } }
+          @media screen and (min-width: 875px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.29rem; } }
+          @media screen and (min-width: 1000px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.36rem; } }
+          @media screen and (min-width: 1125px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.43rem; } }
+          @media screen and (min-width: 1250px) {
+            .teams .teams-section .teams-text li button {
+              font-size: 1.5rem; } }
+        .teams .teams-section .teams-text li .main-copy {
+          width: 55%; }
+        .teams .teams-section .teams-text li:last-child {
+          margin-bottom: 0; }
+          .teams .teams-section .teams-text li:last-child button {
+            background-color: #001622;
+            color: #D5D5D5;
+            box-shadow: 1px 1px 3px #001622; }
+            @media screen and (min-width: 0px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 0.94rem; } }
+            @media screen and (min-width: 375px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.01rem; } }
+            @media screen and (min-width: 500px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.08rem; } }
+            @media screen and (min-width: 625px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.15rem; } }
+            @media screen and (min-width: 750px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.22rem; } }
+            @media screen and (min-width: 875px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.29rem; } }
+            @media screen and (min-width: 1000px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.36rem; } }
+            @media screen and (min-width: 1125px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.43rem; } }
+            @media screen and (min-width: 1250px) {
+              .teams .teams-section .teams-text li:last-child button {
+                font-size: 1.5rem; } }
+    .teams .teams-section:before {
+      background-color: #D5D5D5; }
+    .teams .teams-section.teams-section__falcons {
+      margin-bottom: 5rem;
+      background-image: url("../img/hero_img_1.png");
+      background-position: 95% center; }
+      .teams .teams-section.teams-section__falcons h2 div {
+        background-color: #A61931; }
+      .teams .teams-section.teams-section__falcons .teams-text li {
+        align-items: flex-start; }
+        .teams .teams-section.teams-section__falcons .teams-text li div {
+          align-items: flex-start; }
+          .teams .teams-section.teams-section__falcons .teams-text li div button {
+            background-color: #A61931; }
+        .teams .teams-section.teams-section__falcons .teams-text li h3 {
+          align-items: flex-start; }
+          .teams .teams-section.teams-section__falcons .teams-text li h3 span:first-child {
+            border-left: 3px solid #A61931;
+            padding-left: 0.9375rem; }
+          .teams .teams-section.teams-section__falcons .teams-text li h3 span:nth-child(2) {
+            color: #A61931; }
+          .teams .teams-section.teams-section__falcons .teams-text li h3 date {
+            color: #A61931; }
+      .teams .teams-section.teams-section__falcons:before {
+        transform: skewY(-3deg);
+        transform-origin: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform-origin: 0; }
+    .teams .teams-section.teams-section__united {
+      background-image: url("../img/hero_img_2.png");
+      background-position: 5% center; }
+      .teams .teams-section.teams-section__united h2 {
+        flex-direction: row-reverse; }
+        .teams .teams-section.teams-section__united h2 div {
+          background-color: #817246;
+          align-items: flex-end; }
+      .teams .teams-section.teams-section__united .teams-text li {
+        align-items: flex-end;
+        text-align: right; }
+        .teams .teams-section.teams-section__united .teams-text li div {
+          align-items: flex-end; }
+          .teams .teams-section.teams-section__united .teams-text li div button {
+            background-color: #817246; }
+        .teams .teams-section.teams-section__united .teams-text li h3 span:first-child {
+          border-right: 3px solid #817246;
+          padding-right: 0.9375rem; }
+        .teams .teams-section.teams-section__united .teams-text li h3 span:nth-child(2) {
+          color: #817246; }
+        .teams .teams-section.teams-section__united .teams-text li h3 date {
+          color: #817246; }
+      .teams .teams-section.teams-section__united:before {
+        transform: skewY(3deg);
+        transform-origin: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1; }
+  @media screen and (min-width: 600px) {
+    .teams {
+      flex-direction: row-reverse;
+      background-image: url("../img/hourglass.svg");
+      background-repeat: no-repeat;
+      background-size: 135%;
+      background-position: center;
+      height: 700px; }
+      .teams .teams-section {
+        width: 50%;
+        min-height: 100%;
+        position: relative;
+        background-color: transparent;
+        padding: 0 0.9375rem;
+        justify-content: flex-start; }
+        .teams .teams-section:before {
+          display: none; }
+        .teams .teams-section .teams-text {
+          justify-content: space-between;
+          height: 100%;
+          padding: 0;
+          margin-bottom: 0;
+          padding-bottom: 3.16406rem;
+          padding-top: 2rem; }
+        .teams .teams-section.teams-section__falcons {
+          background-size: auto 31.44rem;
+          background-position: 128% 70%; }
+        .teams .teams-section.teams-section__united {
+          background-size: auto 29.44rem;
+          background-position: -25% 50%; }
+        .teams .teams-section h2 {
+          margin-top: -12%;
+          margin-bottom: -12%; } }
+
+#events .section-header {
+  margin-bottom: -1.6375rem; }
+
+#events .section-footer {
+  z-index: 4;
+  margin-top: -1vw; }
+
+.section-list.section-list--events {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.23438rem;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  min-width: min-content;
+  padding-left: 4vw;
+  overflow: hidden; }
+  @media screen and (min-width: 900px) {
+    .section-list.section-list--events {
+      padding-left: 2vw;
+      min-width: 0;
+      justify-content: center;
+      flex-wrap: wrap; } }
+  .section-list.section-list--events li {
+    position: relative;
+    margin-right: 5vw; }
+    @media screen and (min-width: 900px) {
+      .section-list.section-list--events li {
+        margin-right: 3vw; }
+        .section-list.section-list--events li:nth-child(n+6) {
+          display: none; } }
+    .section-list.section-list--events li figure {
+      height: 58vw;
+      min-height: 186px;
+      width: 47vw;
+      min-width: 200px;
+      max-height: 350px;
+      max-width: 250px;
+      background-size: auto 110%;
+      background-position: top center;
+      color: #FEFEFE;
+      text-shadow: 0 0 2px #001622;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-top: 0.9375rem;
+      background-image: url("../img/GraveDigger.jpg"); }
+    .section-list.section-list--events li .small-gold-bar {
+      z-index: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      color: #D5D5D5;
+      text-transform: capitalize; }
+      .section-list.section-list--events li .small-gold-bar h2, .section-list.section-list--events li .small-gold-bar date {
+        width: 100%;
+        height: 100%;
+        background-color: #817246;
+        padding: 0.46875rem; }
+      .section-list.section-list--events li .small-gold-bar date {
+        padding-top: 0;
+        padding-bottom: 2vw; }
+        @media screen and (min-width: 0px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.68rem; } }
+        @media screen and (min-width: 375px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.72rem; } }
+        @media screen and (min-width: 500px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.78rem; } }
+        @media screen and (min-width: 625px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.82rem; } }
+        @media screen and (min-width: 750px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.88rem; } }
+        @media screen and (min-width: 875px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.93rem; } }
+        @media screen and (min-width: 1000px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 0.97rem; } }
+        @media screen and (min-width: 1125px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 1.02rem; } }
+        @media screen and (min-width: 1250px) {
+          .section-list.section-list--events li .small-gold-bar date {
+            font-size: 1.07rem; } }
+      @media screen and (min-width: 0px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 0.94rem; } }
+      @media screen and (min-width: 375px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.01rem; } }
+      @media screen and (min-width: 500px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.08rem; } }
+      @media screen and (min-width: 625px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.15rem; } }
+      @media screen and (min-width: 750px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.22rem; } }
+      @media screen and (min-width: 875px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.29rem; } }
+      @media screen and (min-width: 1000px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.36rem; } }
+      @media screen and (min-width: 1125px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.43rem; } }
+      @media screen and (min-width: 1250px) {
+        .section-list.section-list--events li .small-gold-bar h2 {
+          font-size: 1.5rem; } }
+    .section-list.section-list--events li:nth-child(odd) .small-gold-bar {
+      text-align: right; }
+      .section-list.section-list--events li:nth-child(odd) .small-gold-bar:after {
+        transform-origin: 0; }
+    .section-list.section-list--events li:first-child figure {
+      background-image: url("../img/stadiumwithfalcon.jpg"); }
+    .section-list.section-list--events li:nth-child(2) figure {
+      background-image: url("../img/KennyChesney.jpg"); }
+    .section-list.section-list--events li:nth-child(3) figure {
+      background-image: url("../img/stadiumfront.jpg"); }
+    .section-list.section-list--events li:last-child figure {
+      background-image: url("../img/GraveDigger.jpg"); }
+    .section-list.section-list--events li:nth-child(n+10) {
+      display: none; }
+
+main {
+  position: relative;
+  padding-bottom: 3.16406rem; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,210 @@
+.section-list--hero {
+	margin-top: 12vw;
+	display: flex;
+	justify-content: flex-end;
+	overflow-y: hidden;
+
+	@include breakpoint(600px) {
+		margin-top: 40px;
+	}
+
+	.section-list__img {
+		height: 100vw;
+		width: 100%;
+		max-height: 700px;
+		@include bgImg("slideshow/falcons.jpg");
+		background-size: cover;
+		background-position: top center;
+
+		@include breakpoint(600px) {
+			background-position: 50% 20%;
+		}
+	}
+
+	.section-list__page {
+		position: relative;
+		justify-content: stretch;
+		align-items: stretch;
+
+		.hero__text {
+			display: flex;
+			align-items: stretch;
+			justify-content: stretch;
+			z-index: 1;
+			position: relative;
+
+			.hero__text--text {
+				display: flex;
+				flex-direction: column;
+				padding: 4vw 0vw 6vw 6vw;
+				justify-content: stretch;
+				align-items: stretch;
+				width: 100%;
+				background-color: $darkBlue;
+				color: $grey;
+				border-bottom: $thinBorder $darkRed;
+				font-weight: 100;
+
+				@include breakpoint(500px) {
+					padding: 2vw 0vw 4vw 4vw;
+				}
+
+				@include breakpoint(600px) {
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				@include breakpoint(725px) {
+					padding: 2vw;
+					justify-content: space-around;
+				}
+
+				@include breakpoint(900px) {
+					flex-direction: column;
+					align-items: flex-end;
+					justify-content: stretch;
+					padding: 1vw;
+					padding-bottom: 2vw;
+					padding-top: 0;
+					text-align: right;
+
+				}
+
+				.hero__header {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 4vw;
+
+					@include breakpoint(500px) {
+						margin-bottom: 3vw;
+					}
+
+					@include breakpoint(600px) {
+						margin-bottom: 0;
+					}
+
+					@include breakpoint(900px) {
+						margin: 0;
+						align-items: flex-end;
+						margin-bottom: -4vw;
+						transform: translateY(-4vw);
+					}
+
+					@include breakpoint(1300px) {
+						transform: translateY(-6vw);
+						margin-bottom: -6vw;
+					}
+
+					h1 {
+						margin-bottom: 1vw;
+						margin-top: -2vw;
+						@include fontSize(xl);
+
+						@include breakpoint(725px) {
+							margin-top: 0;
+							margin-bottom: 0.5vw;
+						}
+
+						@include breakpoint(900px) {
+							margin-bottom: 0.25vw;
+						}
+					}
+
+					p {
+						@include fontSize(sm);
+						
+						@include breakpoint(900px) {
+							margin-right: 0.5vw;
+						}
+					}
+				}
+
+				.hero__links {
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: stretch;
+					align-items: center;
+					text-transform: uppercase;
+
+					@include breakpoint(900px) {
+						margin-top: 2vw;        
+					}
+
+					li {
+						margin-right: 5vw;
+						display: flex;
+						flex-wrap: nowrap;
+						justify-content: stretch;
+						align-items: center;
+						text-transform: uppercase;
+
+						@include breakpoint(900px) {
+							margin-right: 0;
+							margin-left: 5vw;
+						}
+
+						a {
+							@include fontSize(md);
+							border-bottom: $thickBorder $lightRed;
+						}
+					}
+				}
+			}
+			
+			.hero__angles {
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+
+				&:before {
+					content: '';
+					background-color: $darkBlue;
+					width: 100%;
+					@include skew(3deg);
+					border-top: $thinBorder $darkRed;
+					border-bottom: $thinBorder $darkRed;
+					top: -3px;
+					z-index: -2;
+					
+					@include breakpoint(725px) {
+						transform: none;
+					}
+					
+				}
+
+				&:after {
+					display: none;
+
+					@include breakpoint(725px) {
+						display: block;
+						top: -5px;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						content: '';
+						position: absolute;
+						background-color: $darkBlue;
+						border-top: $thinBorder $darkRed;
+						z-index: -1;
+						transform: translateX(70%) rotate(-12deg);
+						transform-origin: 0%;
+						height: 200%;
+					}
+
+					@include breakpoint(900px) {
+						transform: translateX(40%) rotate(-12deg);
+						height: 1000%;
+					}
+				}
+
+				@include breakpoint(725px) {
+					
+				}
+			}
+
+			
+		}
+	}
+}

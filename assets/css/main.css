@@ -1137,12 +1137,42 @@ header {
 
 .teams {
   width: 100%;
+  min-width: 320px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 5rem;
   position: relative;
   color: #001622; }
+  .teams .teams-diamonds {
+    display: none; }
+    @media screen and (min-width: 550px) {
+      .teams .teams-diamonds {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #D5D5D5;
+        width: 100%;
+        overflow: hidden; }
+        .teams .teams-diamonds:before, .teams .teams-diamonds:after {
+          height: 50vw;
+          width: 50vw;
+          background-color: #003950;
+          content: '';
+          position: absolute;
+          z-index: 2; }
+        .teams .teams-diamonds:before {
+          left: 0vw;
+          transform: translate(-70%, -55%) rotate(-60deg) skew(-30deg);
+          top: 50%; }
+        .teams .teams-diamonds:after {
+          right: 0vw;
+          transform: translate(70%, 45%) rotate(60deg) skew(30deg);
+          bottom: 50%; } }
   .teams .teams-section {
     background-color: #D5D5D5;
     width: 100%;
@@ -1151,15 +1181,62 @@ header {
     background-repeat: no-repeat;
     justify-content: flex-start;
     padding: 0.9375rem;
+    margin-bottom: 5rem;
     padding-bottom: 0;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 6vw 3vw; }
+    @media screen and (min-width: 550px) {
+      .teams .teams-section {
+        margin-bottom: 0;
+        background-size: auto 85%;
+        background-color: transparent;
+        z-index: 3; } }
+    .teams .teams-section:before {
+      background-color: #D5D5D5;
+      display: none; }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__falcons {
+        padding-left: 5vw; } }
+    @media screen and (min-width: 550px) {
+      .teams .teams-section.teams-section__falcons {
+        padding-left: 2.5vw; } }
+    .teams .teams-section.teams-section__falcons:before {
+      transform: skewY(-3deg);
+      transform-origin: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transform-origin: 0; }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__united {
+        padding-right: 5vw; } }
+    @media screen and (min-width: 550px) {
+      .teams .teams-section.teams-section__united {
+        padding-right: 2.5vw; } }
+    .teams .teams-section.teams-section__united:before {
+      transform: skewY(3deg);
+      transform-origin: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1; }
     .teams .teams-section h2 {
       display: flex;
       text-transform: uppercase;
       color: #D5D5D5;
       width: 100%;
       margin-top: -3.16406rem; }
+      @media screen and (min-width: 550px) {
+        .teams .teams-section h2 {
+          margin-top: -25%; } }
       .teams .teams-section h2 div {
         display: flex;
         flex-direction: column;
@@ -1167,7 +1244,8 @@ header {
         padding: 0.9rem 0.6rem 0.5rem 0.65rem;
         box-shadow: 1px 1px 3px #001622;
         color: #001622;
-        letter-spacing: 0.1rem; }
+        letter-spacing: 0.1rem;
+        min-width: 36%; }
         @media screen and (min-width: 0px) {
           .teams .teams-section h2 div {
             font-size: 0.94rem; } }
@@ -1195,6 +1273,9 @@ header {
         @media screen and (min-width: 1250px) {
           .teams .teams-section h2 div {
             font-size: 1.5rem; } }
+        @media screen and (min-width: 400px) {
+          .teams .teams-section h2 div {
+            min-width: 32%; } }
         .teams .teams-section h2 div .teams-header {
           font-weight: 800;
           color: #D5D5D5;
@@ -1227,45 +1308,74 @@ header {
           @media screen and (min-width: 1250px) {
             .teams .teams-section h2 div .teams-header {
               font-size: 2.37rem; } }
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 550px) {
+          .teams .teams-section h2 div {
+            min-width: 56%; } }
+        @media screen and (min-width: 900px) {
           .teams .teams-section h2 div {
             min-width: 50%; } }
     .teams .teams-section .teams-text {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      margin: 0.9375rem; }
+      justify-content: flex-start; }
+      @media screen and (min-width: 400px) {
+        .teams .teams-section .teams-text {
+          margin: 0 3vw; } }
+      @media screen and (min-width: 550px) {
+        .teams .teams-section .teams-text {
+          margin: 0; } }
       .teams .teams-section .teams-text li {
         margin-bottom: 2.10938rem;
         display: flex;
         flex-direction: column; }
-        @media screen and (min-width: 0px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 0.94rem; } }
-        @media screen and (min-width: 375px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.01rem; } }
-        @media screen and (min-width: 500px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.08rem; } }
-        @media screen and (min-width: 625px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.15rem; } }
-        @media screen and (min-width: 750px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.22rem; } }
-        @media screen and (min-width: 875px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.29rem; } }
-        @media screen and (min-width: 1000px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.36rem; } }
-        @media screen and (min-width: 1125px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.43rem; } }
-        @media screen and (min-width: 1250px) {
-          .teams .teams-section .teams-text li .main-copy {
-            font-size: 1.5rem; } }
+        .teams .teams-section .teams-text li .main-copy {
+          max-width: 150px;
+          margin-top: 3vw; }
+          @media screen and (min-width: 0px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 0.94rem; } }
+          @media screen and (min-width: 375px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.01rem; } }
+          @media screen and (min-width: 500px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.08rem; } }
+          @media screen and (min-width: 625px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.15rem; } }
+          @media screen and (min-width: 750px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.22rem; } }
+          @media screen and (min-width: 875px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.29rem; } }
+          @media screen and (min-width: 1000px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.36rem; } }
+          @media screen and (min-width: 1125px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.43rem; } }
+          @media screen and (min-width: 1250px) {
+            .teams .teams-section .teams-text li .main-copy {
+              font-size: 1.5rem; } }
+          @media screen and (min-width: 400px) {
+            .teams .teams-section .teams-text li .main-copy {
+              max-width: 200px; } }
+          @media screen and (min-width: 550px) {
+            .teams .teams-section .teams-text li .main-copy {
+              min-height: 190px;
+              max-width: 150px; } }
+          @media screen and (min-width: 700px) {
+            .teams .teams-section .teams-text li .main-copy {
+              max-width: 210px;
+              min-height: 170px; } }
+          @media screen and (min-width: 800px) {
+            .teams .teams-section .teams-text li .main-copy {
+              min-height: 130px;
+              max-width: 250px; } }
+          @media screen and (min-width: 900px) {
+            .teams .teams-section .teams-text li .main-copy {
+              min-height: 180px; } }
         .teams .teams-section .teams-text li .teams-cta {
           display: flex;
           flex-direction: column;
@@ -1434,8 +1544,6 @@ header {
           @media screen and (min-width: 1250px) {
             .teams .teams-section .teams-text li button {
               font-size: 1.5rem; } }
-        .teams .teams-section .teams-text li .main-copy {
-          width: 55%; }
         .teams .teams-section .teams-text li:last-child {
           margin-bottom: 0; }
           .teams .teams-section .teams-text li:last-child button {
@@ -1469,12 +1577,12 @@ header {
             @media screen and (min-width: 1250px) {
               .teams .teams-section .teams-text li:last-child button {
                 font-size: 1.5rem; } }
-    .teams .teams-section:before {
-      background-color: #D5D5D5; }
     .teams .teams-section.teams-section__falcons {
-      margin-bottom: 5rem;
       background-image: url("../img/hero_img_1.png");
       background-position: 95% center; }
+      @media screen and (min-width: 550px) {
+        .teams .teams-section.teams-section__falcons {
+          background-position: 115% center; } }
       .teams .teams-section.teams-section__falcons h2 div {
         background-color: #A61931; }
       .teams .teams-section.teams-section__falcons .teams-text li {
@@ -1492,20 +1600,12 @@ header {
             color: #A61931; }
           .teams .teams-section.teams-section__falcons .teams-text li h3 date {
             color: #A61931; }
-      .teams .teams-section.teams-section__falcons:before {
-        transform: skewY(-3deg);
-        transform-origin: 100%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        transform-origin: 0; }
     .teams .teams-section.teams-section__united {
       background-image: url("../img/hero_img_2.png");
       background-position: 5% center; }
+      @media screen and (min-width: 550px) {
+        .teams .teams-section.teams-section__united {
+          background-position: -33% center; } }
       .teams .teams-section.teams-section__united h2 {
         flex-direction: row-reverse; }
         .teams .teams-section.teams-section__united h2 div {
@@ -1525,49 +1625,18 @@ header {
           color: #817246; }
         .teams .teams-section.teams-section__united .teams-text li h3 date {
           color: #817246; }
-      .teams .teams-section.teams-section__united:before {
-        transform: skewY(3deg);
-        transform-origin: 100%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 550px) {
     .teams {
       flex-direction: row-reverse;
-      background-image: url("../img/hourglass.svg");
       background-repeat: no-repeat;
-      background-size: 135%;
+      background-size: cover;
       background-position: center;
-      height: 700px; }
+      min-height: min-content; }
       .teams .teams-section {
         width: 50%;
         min-height: 100%;
         position: relative;
-        background-color: transparent;
-        padding: 0 0.9375rem;
-        justify-content: flex-start; }
-        .teams .teams-section:before {
-          display: none; }
-        .teams .teams-section .teams-text {
-          justify-content: space-between;
-          height: 100%;
-          padding: 0;
-          margin-bottom: 0;
-          padding-bottom: 3.16406rem;
-          padding-top: 2rem; }
-        .teams .teams-section.teams-section__falcons {
-          background-size: auto 31.44rem;
-          background-position: 128% 70%; }
-        .teams .teams-section.teams-section__united {
-          background-size: auto 29.44rem;
-          background-position: -25% 50%; }
-        .teams .teams-section h2 {
-          margin-top: -12%;
-          margin-bottom: -12%; } }
+        justify-content: flex-start; } }
 
 #events .section-header {
   margin-bottom: -1.6375rem; }

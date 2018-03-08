@@ -1,11 +1,51 @@
 .teams {
 	width: 100%;
+	min-width: 320px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: $xxlBreakMobile;
 	position: relative;
 	color: $darkBlue;
+	
+	.teams-diamonds {
+		display: none;
+
+		@include breakpoint(550px) {
+			z-index: 1;
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: $grey;
+			width: 100%;
+			overflow: hidden;
+
+			&:before, &:after {
+				height: 50vw;
+				width: 50vw;
+				background-color: $lightBlue;
+				content: '';
+				position: absolute;
+				z-index: 2;
+			}
+
+			&:before {
+				left: 0vw;
+				transform: translate(-70%, -55%) rotate(-60deg) skew(-30deg);
+				top: 50%;
+			}
+
+			&:after {
+				right: 0vw;
+				transform: translate(70%, 45%) rotate(60deg) skew(30deg);
+				bottom: 50%;
+			}
+		}
+	}
+	
 
 	.teams-section {
 		background-color: $grey;
@@ -15,9 +55,66 @@
 		background-repeat: no-repeat;
 		justify-content: flex-start;
 		padding: $mediumBreakMobile;
+		margin-bottom: $xxlBreakMobile;
 		padding-bottom: 0;
 		display: flex;
 		flex-direction: column;
+		padding: 6vw 3vw;
+
+		@include breakpoint(550px) {
+			margin-bottom: 0;
+			background-size: auto 85%;
+			background-color: transparent;
+			z-index: 3;
+		}
+
+		&:before {
+			background-color: $grey;
+			display: none;
+		}
+
+		&.teams-section__falcons {
+			@include breakpoint(400px) {
+				padding-left: 5vw;
+			}
+
+			@include breakpoint(550px) {
+				padding-left: 2.5vw;
+			}
+
+			&:before {
+				@include skew(-3deg);
+				transform-origin: 0;
+
+				// @include breakpoint(550px) {
+				// 	transform: rotate(45deg) translate(-50%);
+				// 	left: 100%;
+				// 	right: initial;
+				// }
+			}
+		}
+		
+
+		&.teams-section__united {
+			@include breakpoint(400px) {
+				padding-right: 5vw;
+			}
+
+			@include breakpoint(550px) {
+				padding-right: 2.5vw;
+			}
+
+			&:before {
+				@include skew(3deg);
+
+				// @include breakpoint(550px) {
+				// 	transform: rotate(45deg) translate(50%);
+				// 	right: 100%;
+				// 	left: initial;
+				// }
+			}
+		}
+
 
 		h2 {
 			display: flex;
@@ -25,6 +122,10 @@
 			color: $grey;
 			width: 100%;
 			margin-top: (0 - $xlBreakMobile);
+
+			@include breakpoint(550px) {
+				margin-top: -25%;
+			}
 
 			div {
 				display: flex;
@@ -35,6 +136,11 @@
 				color: $darkBlue;
 				letter-spacing: 0.1rem;
 				@include fontSize(sm);
+				min-width: 36%;
+
+				@include breakpoint(400px) {
+					min-width: 32%;
+				}
 
 				.teams-header {
 					@include fontSize(xxl);
@@ -44,7 +150,11 @@
 					margin-top: $xsBreakMobile;
 				}
 
-				@include breakpoint(600px) {
+				@include breakpoint(550px) {
+					min-width: 56%;
+				}
+
+				@include breakpoint(900px) {
 					min-width: 50%;
 				}
 			}
@@ -56,7 +166,14 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
-			margin: $mediumBreakMobile;
+
+			@include breakpoint(400px) {
+				margin: 0 3vw;
+			}
+
+			@include breakpoint(550px) {
+				margin: 0;
+			}
 
 			li {
 				margin-bottom: $largeBreakMobile;
@@ -66,6 +183,31 @@
 
 				.main-copy {
 					@include fontSize(sm);
+					max-width: 150px;
+					margin-top: 3vw;
+
+					@include breakpoint(400px) {
+						max-width: 200px;
+					}
+
+					@include breakpoint(550px) {
+						min-height: 190px;
+						max-width: 150px;
+					}
+
+					@include breakpoint(700px) {
+						max-width: 210px;
+						min-height: 170px;
+					}
+
+					@include breakpoint(800px) {
+						min-height: 130px;
+						max-width: 250px;
+					}
+
+					@include breakpoint(900px) {
+						min-height: 180px;
+					}
 				}
 
 				.teams-cta {
@@ -125,10 +267,6 @@
 					@include buttonShadow;
 				}
 
-				.main-copy {
-					width: 55%;
-				}
-
 				&:last-child {
 					margin-bottom: 0;
 
@@ -142,14 +280,15 @@
 			}
 		}
 
-		&:before {
-			background-color: $grey;
-		}
+		
 
 		&.teams-section__falcons {
-			margin-bottom: $xxlBreakMobile;
 			@include bgImg('hero_img_1.png');
 			background-position: 95% center;
+
+			@include breakpoint(550px) {
+				background-position: 115% center;
+			}
 
 			h2 {
 
@@ -192,16 +331,17 @@
 				}
 			}
 
-			&:before {
-				@include skew(-3deg);
-				transform-origin: 0;
-			}
+			
 		}
 
 		&.teams-section__united {
 			@include bgImg('hero_img_2.png');
 			background-position: 5% center;
 			// flex-direction: row-reverse;
+
+			@include breakpoint(550px) {
+				background-position: -33% center;
+			}
 
 			h2 {
 				flex-direction: row-reverse;
@@ -246,62 +386,24 @@
 				}
 			}
 
-			&:before {
-				@include skew(3deg);
-			}
-
 		}
 	}
 
-	@include breakpoint(600px) {
+	@include breakpoint(550px) {
 		flex-direction: row-reverse;
-		@include bgImg('hourglass.svg');
+		// @include bgImg('hourglass.svg');
 		background-repeat: no-repeat;
-		background-size: 135%;
+		background-size: cover;
 		background-position: center;
-		height: 700px;
+		min-height: min-content;
 
 		.teams-section {
 			width: 50%;
 			min-height: 100%;
 			position: relative;
-			background-color: transparent;
-			padding: 0 $mediumBreakMobile;
+			// background-color: transparent;
+			// padding: 0 $mediumBreakMobile;
 			justify-content: flex-start;
-
-			&:before {
-				display: none;
-			}
-
-			.teams-text {
-				justify-content: space-between;
-				height: 100%;
-				padding: 0;
-				margin-bottom: 0;
-				padding-bottom: $xlBreakMobile;
-				padding-top: 2rem;
-			}
-
-			&.teams-section__falcons {
-				background-size: auto 31.44rem;
-				background-position: 128% 70%;
-
-				.teams-text {
-
-				}
-
-			}
-
-			&.teams-section__united {
-				background-size: auto 29.44rem;
-				background-position: -25% 50%;
-			}
-
-			h2 {
-				margin-top: -12%;
-				margin-bottom: -12%;
-			}
-
 		}
 	}
 }

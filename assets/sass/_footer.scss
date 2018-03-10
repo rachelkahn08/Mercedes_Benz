@@ -1,20 +1,15 @@
 
 
-
-
-
-
 // Footer Styling
 
 footer {
-  background: $darkblue;
+  background: $darkBlue;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-transform: uppercase;
 	color: $white;
-  margin-top: 15%;
-  padding: 15% 10%;
+  padding: 10% 5%;
   position: relative;
 
   &:before {
@@ -26,11 +21,11 @@ footer {
     top: -5px;
     left: 0;
     right: 0;
-    background: $darkblue;
+    background: $darkBlue;
     transform: skewY(2deg);
     transform-origin: 100%;
     z-index: -1;
-    border-top: 3px solid $darkred;
+    border-top: 3px solid $darkRed;
   }
 
   @media screen and (min-width: $sm-break) {
@@ -54,6 +49,14 @@ footer {
 			text-decoration: none;
 			@include fontSize(xs)
 			color: $white;
+			padding-bottom: 2px;
+			line-height: 25px;
+			transition: .4s all;
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				border-bottom: 2px solid $white;
+			}
 		}
 
 		.mbs-logo__footer {
@@ -68,7 +71,7 @@ footer {
 		}
 
 		.sitemap,
-		.teams,
+		.atlanta-teams,
 		.social-media {
 			display: flex;
 			flex-direction: column;

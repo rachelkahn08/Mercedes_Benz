@@ -30,13 +30,18 @@
 	li {
 		position: relative;
 		margin-right: 5vw;
+		transision: .5s all;
+
+		// &:hover {
+		//     transform: scale(1.1);
+		// }
 
 		@include breakpoint(900px) {
 			margin-right: 3vw;
 
-			&:nth-child(n+6) {
-				display: none;
-			}
+			// &:nth-child(n+6) {
+			// 	display: none;
+			// }
 		}
 
 		figure {
@@ -48,7 +53,11 @@
 			text-transform: uppercase;
 			font-weight: 800;
 			margin-top: $mediumBreakMobile;
-			@include bgImg('GraveDigger.jpg');
+			@include bgImg('GraveDigger.jpg');			
+
+			@media screen and (min-width: 1200px) {
+				max-width: 250px;
+			}
 		}
 
 		.small-gold-bar {
@@ -102,18 +111,45 @@
 		&:nth-child(3) {
 			figure {
 				@include bgImg('stadiumfront.jpg');
+				background-position: 48vh 40vh;
 			}
 		}
 
-		&:last-child {
+		&:nth-child(5) {
 			figure {
-				@include bgImg('GraveDigger.jpg');
+				@include bgImg('ed_sheeran.jpg');
+				background-position: 48vh 40vh;
 			}
 		}
 
-		&:nth-child(n+10) {
-			display: none;
+		&:nth-child(6) {
+			figure {
+				@include bgImg('taylor-swift.jpg');
+				background-position: 48vh 40vh;
+			}
 		}
+
+		&:nth-child(7) {
+			figure {
+				@include bgImg('sec.jpg');
+			    background-position: 61vh 46vh;
+			}
+		}
+
+		&:nth-child(8) {
+			figure {
+				@include bgImg('superbowl.jpg');
+				background-position: 66vh 49vh;
+			}
+		}
+
+		
+
+		// &:nth-child(n+10) {
+		// 	display: none;
+		// }
 
 	}
 }
+
+

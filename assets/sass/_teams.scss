@@ -201,12 +201,13 @@
 					}
 
 					@include breakpoint(800px) {
-						min-height: 130px;
 						max-width: 250px;
+						min-height: 170px;
 					}
 
 					@include breakpoint(900px) {
 						min-height: 180px;
+					    min-height: 220px;
 					}
 				}
 
@@ -340,7 +341,7 @@
 			// flex-direction: row-reverse;
 
 			@include breakpoint(550px) {
-				background-position: -33% center;
+				background-position: -20% center;
 			}
 
 			h2 {

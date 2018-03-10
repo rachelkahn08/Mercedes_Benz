@@ -89,6 +89,7 @@
 						align-items: flex-end;
 						margin-bottom: -4vw;
 						transform: translateY(-4vw);
+						margin-right: 20px;
 					}
 
 					@include breakpoint(1300px) {
@@ -129,6 +130,7 @@
 
 					@include breakpoint(900px) {
 						margin-top: 2vw;        
+						margin-right: 20px;
 					}
 
 					li {
@@ -147,6 +149,11 @@
 						a {
 							@include fontSize(md);
 							border-bottom: $thickBorder $lightRed;
+							transition: .4s all;
+
+							&:hover {
+								border-bottom: $thickBorder $white;
+							}
 						}
 					}
 				}

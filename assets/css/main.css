@@ -595,7 +595,7 @@ header {
     padding-top: 65px;
     padding-bottom: 35px;
     position: absolute;
-    border-bottom: 1px solid green;
+    border-bottom: 3px solid #580614;
     width: 100%;
     top: 0;
     left: 0;
@@ -603,22 +603,28 @@ header {
     flex-direction: column;
     z-index: 6;
     background-color: #001622; }
+    @media screen and (min-width: 600px) {
+      header .header__nav {
+        display: flex; } }
     header .header__nav li {
       display: flex;
+      justify-content: center;
       margin: 0px 20px;
       color: #FEFEFE;
-      border-bottom: 1px solid #D5D5D5;
       text-transform: uppercase;
       height: 100%; }
       @media screen and (min-width: 725px) {
         header .header__nav li {
           margin: 0; } }
       header .header__nav li a {
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: auto;
         padding-top: 20px;
-        padding-left: 15px;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+        transition: .4s all; }
+        header .header__nav li a:hover {
+          border-bottom: 2px solid #FEFEFE; }
       header .header__nav li:first-child {
         margin-top: 25px; }
         @media screen and (min-width: 725px) {
@@ -874,7 +880,8 @@ header {
               margin: 0;
               align-items: flex-end;
               margin-bottom: -4vw;
-              transform: translateY(-4vw); } }
+              transform: translateY(-4vw);
+              margin-right: 20px; } }
           @media screen and (min-width: 1300px) {
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
               transform: translateY(-6vw);
@@ -954,7 +961,8 @@ header {
           text-transform: uppercase; }
           @media screen and (min-width: 900px) {
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links {
-              margin-top: 2vw; } }
+              margin-top: 2vw;
+              margin-right: 20px; } }
           .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li {
             margin-right: 5vw;
             display: flex;
@@ -967,7 +975,8 @@ header {
                 margin-right: 0;
                 margin-left: 5vw; } }
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-              border-bottom: 4px solid #A61931; }
+              border-bottom: 4px solid #A61931;
+              transition: .4s all; }
               @media screen and (min-width: 0px) {
                 .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
                   font-size: 1.08rem; } }
@@ -995,6 +1004,8 @@ header {
               @media screen and (min-width: 1250px) {
                 .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
                   font-size: 1.72rem; } }
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a:hover {
+                border-bottom: 4px solid #FEFEFE; }
       .section-list--hero .section-list__page .hero__text .hero__angles {
         z-index: -1;
         width: 100%;
@@ -1075,8 +1086,16 @@ header {
       width: 77vw;
       max-height: 300px;
       max-width: 400px;
-      background-image: url("../img/stadiumfront.jpg");
+      background-image: url("../img/taylor-swift.jpg");
       background-size: cover; }
+      .section-list.section-list--news li figure .hover-effect {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        transistion: .4s all; }
+        .section-list.section-list--news li figure .hover-effect:hover {
+          background: #A61931;
+          opacity: .7; }
       .section-list.section-list--news li figure h2 {
         display: flex;
         justify-content: center;
@@ -1121,6 +1140,16 @@ header {
       @media screen and (min-width: 900px) {
         .section-list.section-list--news li figure {
           width: 30vw; } }
+    .section-list.section-list--news li:nth-child(2) figure {
+      background-image: url("../img/arthur-blank.jpg"); }
+    .section-list.section-list--news li:nth-child(3) figure {
+      background-image: url("../img/food.jpg"); }
+    .section-list.section-list--news li:nth-child(4) figure {
+      background-image: url("../img/matt-ryan.jpg"); }
+    .section-list.section-list--news li:nth-child(5) figure {
+      background-image: url("../img/stadium-sunset.jpg"); }
+    .section-list.section-list--news li:nth-child(6) figure {
+      background-image: url("../img/inside-stadium.jpg"); }
 
 .explore {
   display: flex;
@@ -1371,11 +1400,12 @@ header {
               min-height: 170px; } }
           @media screen and (min-width: 800px) {
             .teams .teams-section .teams-text li .main-copy {
-              min-height: 130px;
-              max-width: 250px; } }
+              max-width: 250px;
+              min-height: 170px; } }
           @media screen and (min-width: 900px) {
             .teams .teams-section .teams-text li .main-copy {
-              min-height: 180px; } }
+              min-height: 180px;
+              min-height: 220px; } }
         .teams .teams-section .teams-text li .teams-cta {
           display: flex;
           flex-direction: column;
@@ -1605,7 +1635,7 @@ header {
       background-position: 5% center; }
       @media screen and (min-width: 550px) {
         .teams .teams-section.teams-section__united {
-          background-position: -33% center; } }
+          background-position: -20% center; } }
       .teams .teams-section.teams-section__united h2 {
         flex-direction: row-reverse; }
         .teams .teams-section.teams-section__united h2 div {
@@ -1663,19 +1693,18 @@ header {
       flex-wrap: wrap; } }
   .section-list.section-list--events li {
     position: relative;
-    margin-right: 5vw; }
+    margin-right: 5vw;
+    transision: .5s all; }
     @media screen and (min-width: 900px) {
       .section-list.section-list--events li {
-        margin-right: 3vw; }
-        .section-list.section-list--events li:nth-child(n+6) {
-          display: none; } }
+        margin-right: 3vw; } }
     .section-list.section-list--events li figure {
       height: 58vw;
       min-height: 186px;
       width: 47vw;
       min-width: 200px;
       max-height: 350px;
-      max-width: 250px;
+      max-width: 200px;
       background-size: auto 110%;
       background-position: top center;
       color: #FEFEFE;
@@ -1684,6 +1713,9 @@ header {
       font-weight: 800;
       margin-top: 0.9375rem;
       background-image: url("../img/GraveDigger.jpg"); }
+      @media screen and (min-width: 1200px) {
+        .section-list.section-list--events li figure {
+          max-width: 250px; } }
     .section-list.section-list--events li .small-gold-bar {
       z-index: 3;
       display: flex;
@@ -1763,11 +1795,133 @@ header {
     .section-list.section-list--events li:nth-child(2) figure {
       background-image: url("../img/KennyChesney.jpg"); }
     .section-list.section-list--events li:nth-child(3) figure {
-      background-image: url("../img/stadiumfront.jpg"); }
-    .section-list.section-list--events li:last-child figure {
-      background-image: url("../img/GraveDigger.jpg"); }
-    .section-list.section-list--events li:nth-child(n+10) {
-      display: none; }
+      background-image: url("../img/stadiumfront.jpg");
+      background-position: 48vh 40vh; }
+    .section-list.section-list--events li:nth-child(5) figure {
+      background-image: url("../img/ed_sheeran.jpg");
+      background-position: 48vh 40vh; }
+    .section-list.section-list--events li:nth-child(6) figure {
+      background-image: url("../img/taylor-swift.jpg");
+      background-position: 48vh 40vh; }
+    .section-list.section-list--events li:nth-child(7) figure {
+      background-image: url("../img/sec.jpg");
+      background-position: 61vh 46vh; }
+    .section-list.section-list--events li:nth-child(8) figure {
+      background-image: url("../img/superbowl.jpg");
+      background-position: 66vh 49vh; }
+
+footer {
+  background: #001622;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: #FEFEFE;
+  padding: 10% 5%;
+  position: relative; }
+  footer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: 0;
+    right: 0;
+    background: #001622;
+    transform: skewY(2deg);
+    transform-origin: 100%;
+    z-index: -1;
+    border-top: 3px solid #580614; }
+  @media screen and (min-width: 630px) {
+    footer {
+      padding: 5% 10%; } }
+  footer .footer__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 630px) {
+      footer .footer__text {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: flex-wrap; } }
+    footer .footer__text a {
+      text-decoration: none;
+      color: #FEFEFE;
+      padding-bottom: 2px;
+      line-height: 25px;
+      transition: .4s all;
+      border-bottom: 2px solid transparent; }
+      @media screen and (min-width: 0px) {
+        footer .footer__text a {
+          font-size: 0.68rem; } }
+      @media screen and (min-width: 375px) {
+        footer .footer__text a {
+          font-size: 0.72rem; } }
+      @media screen and (min-width: 500px) {
+        footer .footer__text a {
+          font-size: 0.78rem; } }
+      @media screen and (min-width: 625px) {
+        footer .footer__text a {
+          font-size: 0.82rem; } }
+      @media screen and (min-width: 750px) {
+        footer .footer__text a {
+          font-size: 0.88rem; } }
+      @media screen and (min-width: 875px) {
+        footer .footer__text a {
+          font-size: 0.93rem; } }
+      @media screen and (min-width: 1000px) {
+        footer .footer__text a {
+          font-size: 0.97rem; } }
+      @media screen and (min-width: 1125px) {
+        footer .footer__text a {
+          font-size: 1.02rem; } }
+      @media screen and (min-width: 1250px) {
+        footer .footer__text a {
+          font-size: 1.07rem; } }
+      footer .footer__text a:hover {
+        border-bottom: 2px solid #FEFEFE; }
+    footer .footer__text .mbs-logo__footer {
+      background-image: url(../../assets/img/mbs-logo.svg);
+      background-repeat: no-repeat;
+      width: 40%;
+      height: 120px; }
+      @media screen and (min-width: 630px) {
+        footer .footer__text .mbs-logo__footer {
+          width: 20%; } }
+    footer .footer__text .sitemap,
+    footer .footer__text .atlanta-teams,
+    footer .footer__text .social-media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+      line-height: 1.5; }
+      @media screen and (min-width: 630px) {
+        footer .footer__text .sitemap,
+        footer .footer__text .atlanta-teams,
+        footer .footer__text .social-media {
+          width: 25%; } }
+      footer .footer__text .sitemap li,
+      footer .footer__text .atlanta-teams li,
+      footer .footer__text .social-media li {
+        width: 100%;
+        text-align: center; }
+      footer .footer__text .sitemap h3,
+      footer .footer__text .atlanta-teams h3,
+      footer .footer__text .social-media h3 {
+        z-index: 5;
+        margin-bottom: 1.5rem;
+        font-weight: bold; }
+      footer .footer__text .sitemap span,
+      footer .footer__text .atlanta-teams span,
+      footer .footer__text .social-media span {
+        margin-right: 2%; }
+  footer .copyright {
+    font-size: .6rem; }
 
 main {
   position: relative;

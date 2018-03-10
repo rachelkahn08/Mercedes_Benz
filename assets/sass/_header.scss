@@ -202,7 +202,7 @@ header {
 		padding-top:  65px;
 		padding-bottom: 35px;
 		position: absolute;
-		border-bottom: 1px solid green;
+		border-bottom: 3px solid $darkRed;
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -211,11 +211,17 @@ header {
 		z-index: 6;
 		background-color: $darkBlue;
 
+		@media screen and (min-width: 600px) {
+			display: flex;
+		}
+
+
 		li {
 			display: flex;
+			justify-content: center;
 			margin: 0px 20px;
 			color: $white;
-			border-bottom: 1px solid $grey;
+			// border-bottom: 1px solid $grey;
 			text-transform: uppercase;
 			height: 100%;
 
@@ -224,11 +230,18 @@ header {
 			}
 
 			a {
-				height: 100%;
-				width: 100%;
+				height: auto;
+				width: auto;
 				padding-top: 20px;
-				padding-left: 15px;
+				// padding-left: 15px;
 				padding-bottom: 5px;
+
+				border-bottom: 2px solid transparent;
+				transition: .4s all;
+
+				&:hover {
+					border-bottom: 2px solid $white;
+				}
 			}
 
 			&:first-child {
@@ -238,7 +251,7 @@ header {
 					margin-top: 0;
 				}
 			}
-		}	
+		}
 		
 		&.hidden {
 			transform: translateX(-100%);

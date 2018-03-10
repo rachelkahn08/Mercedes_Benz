@@ -39,6 +39,20 @@
 			}
 
 			figure {
+
+				.hover-effect {
+					width: 100%;
+					height: 100%;
+					background: transparent;
+					transistion: .4s all;
+
+					&:hover {
+						background: $lightRed;
+						opacity: .7;
+					}
+
+
+				}
 				h2 {
 					@include fontSize(md);
 					display: flex;
@@ -59,8 +73,38 @@
 				}
 
 				@include mediumContainer;
-				@include bgImg("stadiumfront.jpg");
+				@include bgImg("taylor-swift.jpg");
 				background-size: cover;	
+			}
+
+			&:nth-child(2) {
+				figure {
+					@include bgImg('arthur-blank.jpg');
+				}
+			}
+
+			&:nth-child(3) {
+				figure {
+					@include bgImg('food.jpg');
+				}
+			}
+
+			&:nth-child(4) {
+				figure {
+					@include bgImg('matt-ryan.jpg');
+				}
+			}
+
+			&:nth-child(5) {
+				figure {
+					@include bgImg('stadium-sunset.jpg');
+				}
+			}
+
+			&:nth-child(6) {
+				figure {
+					@include bgImg('inside-stadium.jpg');
+				}
 			}
 		}
 	}

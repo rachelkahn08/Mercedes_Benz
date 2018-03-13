@@ -23,26 +23,26 @@ console.log("Hello World from main.js!");
 // 	console.log(bleh);
 // }
 
-var hamburgerMenu = document.querySelector(".hamburger__button");
-hamburgerMenu.addEventListener("click", function () {
-	console.log("clicked");
-	let hiddenNav = document.querySelector(".header__nav");
-	hiddenNav.classList.toggle("hidden");
-	TweenMax.staggerFromTo(".header__nav_items", .5, {height: 0}, {height: "5vh"});
-})
+// var hamburgerMenu = document.querySelector(".hamburger__button");
+// hamburgerMenu.addEventListener("click", function () {
+// 	console.log("clicked");
+// 	let hiddenNav = document.querySelector(".header__nav");
+// 	hiddenNav.classList.toggle("hidden");
+// 	TweenMax.staggerFromTo(".header__nav_items", .5, {height: 0}, {height: "5vh"});
+// })
 
 
 
 
-$(".teams").waypoint(function () {
-	console.log("test2");
-	TweenMax.from(".teams-section__falcons", 2, {right: "-50vw"});
-	console.log("test3");
-	TweenMax.from(".teams-section__united", 2, {left: "-50vw", delay:5});
-	console.log("test4");
-}, {
-	offset: '10%'
-})
+// $(".teams").waypoint(function () {
+// 	console.log("test2");
+// 	TweenMax.from(".teams-section__falcons", 2, {right: "-50vw"});
+// 	console.log("test3");
+// 	TweenMax.from(".teams-section__united", 2, {left: "-50vw", delay:5});
+// 	console.log("test4");
+// }, {
+// 	offset: '10%'
+// })
 
 
 

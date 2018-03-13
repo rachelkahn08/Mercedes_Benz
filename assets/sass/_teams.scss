@@ -7,6 +7,10 @@
 	margin-top: $xxlBreakMobile;
 	position: relative;
 	color: $darkBlue;
+
+	@include breakpoint(550px) {
+		flex-direction: row-reverse;
+	}
 	
 	.teams-diamonds {
 		display: none;
@@ -34,14 +38,47 @@
 
 			&:before {
 				left: 0vw;
-				transform: translate(-70%, -55%) rotate(-60deg) skew(-30deg);
+				transform: translate(-70%, -55%) rotate(-57.5deg) skew(-28deg);
 				top: 50%;
 			}
 
 			&:after {
 				right: 0vw;
-				transform: translate(70%, 45%) rotate(60deg) skew(30deg);
+				transform: translate(70%, 45%) rotate(57.5deg) skew(28deg);
 				bottom: 50%;
+			}
+		
+
+		}
+
+
+		@include breakpoint(800px) {
+			&:before {
+				left: -2.5vw;
+			}
+
+			&:after {
+				right: -2.5vw;
+			}
+		}
+
+		@include breakpoint(1000px) {
+			&:before {
+				left: -5vw;
+			}
+
+			&:after {
+				right: -5vw;
+			}
+		}
+
+		@include breakpoint(1400px) {
+			&:before {
+				left: -7.5vw;
+			}
+
+			&:after {
+				right: -7.5vw;
 			}
 		}
 	}
@@ -51,8 +88,6 @@
 		background-color: $grey;
 		width: 100%;
 		position: relative;
-		background-size: auto 95%;
-		background-repeat: no-repeat;
 		justify-content: flex-start;
 		padding: $mediumBreakMobile;
 		margin-bottom: $xxlBreakMobile;
@@ -62,6 +97,9 @@
 		padding: 6vw 3vw;
 
 		@include breakpoint(550px) {
+			width: 50%;
+			position: relative;
+			justify-content: flex-start;
 			margin-bottom: 0;
 			background-size: auto 85%;
 			background-color: transparent;
@@ -71,52 +109,7 @@
 		&:before {
 			background-color: $grey;
 			display: none;
-		}
-
-		&.teams-section__falcons {
-			@include breakpoint(400px) {
-				padding-left: 5vw;
-			}
-
-			@include breakpoint(550px) {
-				padding-left: 2.5vw;
-			}
-
-			&:before {
-				@include skew(-3deg);
-				transform-origin: 0;
-
-				// @include breakpoint(550px) {
-				// 	transform: rotate(45deg) translate(-50%);
-				// 	left: 100%;
-				// 	right: initial;
-				// }
-			}
-		}
-		
-
-		&.teams-section__united {
-			@include breakpoint(400px) {
-				padding-right: 5vw;
-			}
-
-			@include breakpoint(550px) {
-				padding-right: 2.5vw;
-			}
-
-			&:before {
-				@include skew(3deg);
-
-				// @include breakpoint(550px) {
-				// 	transform: rotate(45deg) translate(50%);
-				// 	right: 100%;
-				// 	left: initial;
-				// }
-			}
-		}
-
-
-		h2 {
+		}h2 {
 			display: flex;
 			text-transform: uppercase;
 			color: $grey;
@@ -158,14 +151,12 @@
 					min-width: 50%;
 				}
 			}
-
-			
 		}
 
 		.teams-text {
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-start;
+			// justify-content: flex-start;
 
 			@include breakpoint(400px) {
 				margin: 0 3vw;
@@ -174,6 +165,10 @@
 			@include breakpoint(550px) {
 				margin: 0;
 			}
+
+			// @include breakpoint(550px) {
+			// 	margin: 0;
+			// }
 
 			li {
 				margin-bottom: $largeBreakMobile;
@@ -201,13 +196,18 @@
 					}
 
 					@include breakpoint(800px) {
-						max-width: 250px;
-						min-height: 170px;
+						max-width: 225px;
+						min-height: 150px;
 					}
 
 					@include breakpoint(900px) {
 						min-height: 180px;
 					    min-height: 220px;
+					}
+
+					@include breakpoint(1000px) {
+						min-height: 150px;
+						max-width: 340px;
 					}
 				}
 
@@ -281,68 +281,103 @@
 			}
 		}
 
-		
-
 		&.teams-section__falcons {
-			@include bgImg('hero_img_1.png');
-			background-position: 95% center;
+			@include bgImg('hero_img_1.png', auto 95%, 95% center);
+
+			@include breakpoint(400px) {
+				padding-left: 5vw;
+			}
 
 			@include breakpoint(550px) {
+				padding-left: 2.5vw;
+				background-position: 150% center;
+			}
+
+			@include breakpoint(650px) {
+				background-position: 130% center;
+			}
+
+			@include breakpoint(700px) {
 				background-position: 115% center;
 			}
 
-			h2 {
+			@include breakpoint(800px) {
+				background-position: 95% center;
+			}
 
-				div {
-					background-color: $lightRed;	
-				}
+			&:before {
+				@include skew(-3deg);
+				transform-origin: 0;
+
+				// @include breakpoint(550px) {
+				// 	transform: rotate(45deg) translate(-50%);
+				// 	left: 100%;
+				// 	right: initial;
+				// }
+			}
+
+			h2 div, .teams-cta button {
+				background-color: $lightRed;
 			}
 
 			.teams-text {
-
-				li {
-					align-items: flex-start;
-
-					div {
-						align-items: flex-start;
-
-						button {
-							background-color: $lightRed;
-						}
-					}
-
-					h3 {
-						align-items: flex-start;
-
-						span {
-							&:first-child {
-								border-left: $thinBorder $lightRed;
-								padding-left: $mediumBreakMobile;
-							}
-
-							&:nth-child(2) {
-								color: $lightRed;
-							}
-						}
-
-						date {
-							color: $lightRed;
-						}
-					}
-				}
+				align-items: flex-start;
 			}
-
-			
 		}
+		
 
 		&.teams-section__united {
-			@include bgImg('hero_img_2.png');
-			background-position: 5% center;
-			// flex-direction: row-reverse;
+			@include bgImg('hero_img_2.png', auto 95%, 5% center);
+
+			@include breakpoint(400px) {
+				padding-right: 5vw;
+			}
 
 			@include breakpoint(550px) {
-				background-position: -20% center;
+				padding-right: 2.5vw;
+				background-position: -50% center;
 			}
+
+			@include breakpoint(650px) {
+				background-position: -30% center;
+			}
+
+			@include breakpoint(700px) {
+				background-position: -15% center;
+			}
+
+			@include breakpoint(800px) {
+				background-position: 2.5% center;
+			}
+
+			&:before {
+				@include skew(3deg);
+
+				// @include breakpoint(550px) {
+				// 	transform: rotate(45deg) translate(50%);
+				// 	right: 100%;
+				// 	left: initial;
+				// }
+			}
+
+			.next-game {
+				span {
+					justfiy-content: flex-end;
+				}
+			}
+		}
+
+
+		
+
+		&.teams-section__united {
+			// @include bgImg('hero_img_2.png', auto 95%);
+			// background-position: 5% center;
+			// flex-direction: row-reverse;
+
+			// @include breakpoint(550px) {
+			// 	background-position: -20% center;
+			// }
 
 			h2 {
 				flex-direction: row-reverse;
@@ -390,21 +425,21 @@
 		}
 	}
 
-	@include breakpoint(550px) {
-		flex-direction: row-reverse;
-		// @include bgImg('hourglass.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		min-height: min-content;
+	// @include breakpoint(550px) {
+	// 	flex-direction: row-reverse;
+	// 	// @include bgImg('hourglass.svg');
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
+	// 	// background-position: center;
+	// 	min-height: min-content;
 
-		.teams-section {
-			width: 50%;
-			min-height: 100%;
-			position: relative;
-			// background-color: transparent;
-			// padding: 0 $mediumBreakMobile;
-			justify-content: flex-start;
-		}
-	}
+	// 	.teams-section {
+	// 		width: 50%;
+	// 		min-height: 100%;
+	// 		position: relative;
+	// 		// background-color: transparent;
+	// 		// padding: 0 $mediumBreakMobile;
+	// 		justify-content: flex-start;
+	// 	}
+	// }
 }

@@ -42,36 +42,3 @@ main {
 .section-footer {
 	@include sectionFooter;
 }
-
-.section-list {
-	// overflow-x: visible;
-}
-
-.font--xs {
-	@include fontSize(xs);
-	color: green;
-}
-
-.font--sm {
-	@include fontSize(sm);
-}
-
-.font--md {
-	@include fontSize(md);
-}
-
-.font--lg {
-	@include fontSize(lg);
-}
-
-.font--xl {
-	@include fontSize(xl);
-}
-
-.font--xxl {
-	@include fontSize(xxl);
-}
-
-.font--xxxl {
-	@include fontSize(xxxl);
-}

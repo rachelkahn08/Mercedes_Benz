@@ -233,6 +233,9 @@
 
 // MISC ------------------------------------
 
-@mixin bgImg($filename) {  
+@mixin bgImg($filename, $size: cover, $position: center, $repeat: no-repeat) {  
   background-image: url("../img/" + $filename);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
 }

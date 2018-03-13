@@ -110,44 +110,34 @@
 
 		&:nth-child(3) {
 			figure {
-				@include bgImg('stadiumfront.jpg');
-				background-position: 48vh 40vh;
+				@include bgImg('stadiumfront.jpg', auto 80%, top left);
 			}
 		}
 
 		&:nth-child(5) {
 			figure {
-				@include bgImg('ed_sheeran.jpg');
-				background-position: 48vh 40vh;
+				@include bgImg('ed_sheeran.jpg', auto 80%, 80% top);
 			}
 		}
 
 		&:nth-child(6) {
 			figure {
 				@include bgImg('taylor-swift.jpg');
-				background-position: 48vh 40vh;
 			}
 		}
 
 		&:nth-child(7) {
 			figure {
-				@include bgImg('sec.jpg');
-			    background-position: 61vh 46vh;
+				@include bgImg('sec.jpg', auto 90%, 48% -12%);
+		
 			}
 		}
 
 		&:nth-child(8) {
 			figure {
 				@include bgImg('superbowl.jpg');
-				background-position: 66vh 49vh;
 			}
 		}
-
-		
-
-		// &:nth-child(n+10) {
-		// 	display: none;
-		// }
 
 	}
 }

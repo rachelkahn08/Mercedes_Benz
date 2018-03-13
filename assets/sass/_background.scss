@@ -3,8 +3,6 @@
 	width: 100%;
 	position: absolute;
 	z-index: -4;
-	@include bgImg('background.svg');
-	background-size: 100% auto;
-	background-repeat: repeat-y;
+	@include bgImg('background.svg', 100% auto, center top, repeat-y);
 	margin-top: 29rem;
 }

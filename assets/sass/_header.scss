@@ -84,32 +84,6 @@ header {
 				}
 			}
 		}
-
-		// &:before {
-		// 	@include skew(0deg);
-		// 	height: 100%;
-		// 	width: 100%;
-		// 	bottom: -3px;
-		// 	transform: none;
-		// 	// border: none;
-		// 	// position: absolute;
-		// 	background-color: green;
-		// }
-
-		// &:after {
-		// 	@include skew(-20deg);
-		// 	transform-origin: 0%;
-		// 	z-index: 7;
-		// 	border: none;
-		// 	background-color: $darkBlue;
-		// 	padding: 42px;
-		// 	bottom: -3px;
-		// }
-
-		// &:before, &:after {
-		// 	border-bottom: $thinBorder $darkRed;
-		// 	box-shadow: 0 1px 20px $darkBlue;
-		// }
 	}
 
 	.header__logo {
@@ -210,6 +184,7 @@ header {
 		flex-direction: column;
 		z-index: 6;
 		background-color: $darkBlue;
+		color: $goldBright;
 
 		@media screen and (min-width: 600px) {
 			display: flex;
@@ -220,8 +195,7 @@ header {
 			display: flex;
 			justify-content: center;
 			margin: 0px 20px;
-			color: $white;
-			// border-bottom: 1px solid $grey;
+			
 			text-transform: uppercase;
 			height: 100%;
 
@@ -232,16 +206,14 @@ header {
 			a {
 				height: auto;
 				width: auto;
-				padding-top: 20px;
+				padding-top: 28px;
 				// padding-left: 15px;
 				padding-bottom: 5px;
 
-				border-bottom: 2px solid transparent;
+				border-bottom: 2px solid rgba(0, 0, 0, 0);
 				transition: .4s all;
 
-				&:hover {
-					border-bottom: 2px solid $white;
-				}
+				
 			}
 
 			&:first-child {
@@ -251,6 +223,15 @@ header {
 					margin-top: 0;
 				}
 			}
+			
+			&:hover {
+				color: $goldGlow;
+
+				a {
+					border-bottom: 2px solid $lightRed;
+				}
+			}
+
 		}
 		
 		&.hidden {

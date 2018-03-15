@@ -1197,7 +1197,7 @@ header {
   @media screen and (min-width: 900px) {
     .section-list.section-list--events {
       min-width: 0;
-      justify-content: flex-start;
+      justify-content: center;
       flex-wrap: wrap;
       padding-right: 1rem; } }
   .section-list.section-list--events li {

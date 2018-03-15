@@ -14,14 +14,14 @@
 	<body>
 		<header class="header">
 			<a href="" class="header__logo"></a>
-			<div class="hamburger__button">
+			<div class="hamburger__button" id="hamburger">
 				<div class="hamburger-line hamburger-line1"></div>
 				<div class="hamburger-line hamburger-line2"></div>
 				<div class="hamburger-line hamburger-line3"></div>
 				<p>Menu</p>
 			</div>
 
-			<ul class="header__nav hidden font--xs">
+			<ul class="header__nav hidden" id="headerNav">
 				<li class="header__nav_items"><a href="#stadium">Stadium</a></li>
 				<li class="header__nav_items"><a href="">Plan your visit</a></li>
 				<li class="header__nav_items"><a href="#falcons">Atlanta Falcons</a></li>
@@ -46,7 +46,7 @@
 									<h1>2018 Season Ticket Priority</h1>
 									<p>Reserve your spot in line today!</p>
 								</div>
-								<ul class="hero__links font--md">
+								<ul class="hero__links ">
 									<li>
 										<a href="#">
 											learn more
@@ -64,7 +64,7 @@
 				</ul>
 			</section>
 
-			<section class="news">
+			<section class="news" id="news">
 				<h1 class="section-header" id="news">news</h1>
 				<div class="scrollbox">
 					<ul class="section-list section-list--news">
@@ -151,6 +151,82 @@
 					<span>see all news</span>
 				</div>
 			</section>
+			
+			<section class="teams">
+				<article class="teams-section teams-section__falcons" id="falcons">
+					<div class="teams__title">
+						<h2>
+							<sup>atlanta</sup>
+							falcons
+						</h2>
+						<h3 class="copy__slogan">
+							Rise Up!
+						</h3>	
+					</div>
+					<div class="next-game">
+						<h4 class="next-game__team">
+							<sup>next home game</sup>
+							saints
+						</h4>
+						<date class="next-game__date">
+							december 7, 2017 8:25pm
+						</date>	
+					</div>
+					<div class="teams__copy">
+						<div class="copy__body">
+							<p class="body--text">
+								Mercedes-Benz Stadium is the new home of the Atlanta Falcons in 2017. Check out the full schedule and explore the new Fan First stadium experience to prepare for the season.
+							</p>
+							<button class="body--cta">learn more</button>
+						</div>
+					</div>
+					<div class="next-game__purchase">
+						<button>
+							buy tickets for gameday
+						</button>
+					</div>
+					<div class="teams__figure"></div>
+				</article>
+				<article class="teams-section teams-section__united" id="united">
+					<div class="teams__title">
+						<h2>
+							<sup>atlanta</sup>
+							united
+						</h2>
+						<h3 class="copy__slogan">
+							We are United.
+						</h3>	
+					</div>
+					<div class="copy-container">
+						
+
+					</div>
+						<div class="next-game">
+							<h4 class="next-game__team">
+								<sup>next home game</sup>
+								toronto
+							</h4>
+							<date class="next-game__date">
+								april 7, 2017 6:25pm
+							</date>	
+						</div>
+						<div class="teams__copy">
+							<div class="copy__body">
+								<p class="body--text">
+									You're not just a fan. You are United. When we bleed, you bleed. When we celebrate, you celebrate. Every gut-wrenching loss. Every glorious win. Every battle, every time.
+								</p>
+								<button class="body--cta">learn more</button>
+							</div>
+						</div>
+						
+						<div class="next-game__purchase">
+							<button>
+								buy tickets for gameday
+							</button>
+						</div>
+					<div class="teams__figure"></div>
+				</article>
+			</section>
 
 			<section class="explore" id="#stadium">
 				<h1 class="section-header">explore the stadium</h1>
@@ -162,136 +238,81 @@
 				</div>
 			</section>
 
-			<section class="teams">
-				<div class="teams-diamonds"></div>
-				<article class="teams-section teams-section__falcons" id="falcons">
-					<h2>
-						<div>
-							<span>atlanta</span>
-							<span class="teams-header font--xl">falcons</span>
-						</div>
-					</h2>
-					<ul class="teams-text">
-						<li>
-							<p class="main-copy">Mercedes-Benz Stadium is the new home of the Atlanta Falcons in 2017. Check out the full schedule and explore the new Fan First stadium experience to prepare for the season.</p>
-							<div class="teams-cta">
-								<p class="teams-slogan">Rise Up!</p>
-								<button>learn more</button>
-							</div>
-						</li>
-						<li>
-							<h3 class="next-game">
-								<span>next home game</span>
-								<span>saints</span>
-								<date>
-									december 7, 2017<br >
-									8:25pm
-								</date>
-							</h3>
-							<button class="gameday">gameday</button>
-						</li>
-					</ul>
-				</article>
-				<article class="teams-section teams-section__united" id="united">
-					<h2>
-						<div>
-							<span>atlanta</span>
-							<span class="teams-header">united</span>
-						</div>
-					</h2>
-					<ul class="teams-text">
-						<li>
-							<p class="main-copy">You are not just a fan. You are United. When we bleed, you bleed. When we celebrate, you celebrate. Every gut-wrenching loss. Every glorious win. We battle for 90 minutes, together. From day one. </p>
-							<div class="teams-cta">
-								<p class="teams-slogan">We are United.</p>
-								<button>learn more</button>
-							</div>
-						</li>
-						<li>
-							<h3 class="next-game">
-								<span>next home game</span>
-								<span>toronto</span>
-								<date>
-									april 7, 2017<br />
-									6:25pm
-								</date>
-							</h3>
-							<button class="gameday">gameday</button>
-						</li>
-					</ul>
-				</article>
-			</section>
 
 			<section id="events">
 				<h1 class="section-header">upcoming events</h1>
 				<div class="scrollbox">
 					<ul class="section-list section-list--events">
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>2017 celebration bowl</h2>
-								<date>december 16, 2017</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>kenny chesney</h2>
-								<date>may 26, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>chick-fil-a peach bowl</h2>
-								<date>january 1, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>2018 monster jam</h2>
-								<date>february 24-28, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>ed sheeran</h2>
-								<date>november 10, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>taylor swift</h2>
-								<date>august 10+11, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>2018 sec championship</h2>
-								<date>december 1, 2018</date>
-							</div>
-						</figure>
-					</li>
-					<li class="section-list__page">
-						<figure>
-							<div class="small-gold-bar">
-								<h2>super bowl LIII</h2>
-								<date>february 3, 2019</date>
-							</div>
-						</figure>
-					</li>
-				</ul>
-
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>2017 celebration bowl</h2>
+									<date>december 16, 2017</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>kenny chesney</h2>
+									<date>may 26, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>chick-fil-a peach bowl</h2>
+									<date>january 1, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>2018 monster jam</h2>
+									<date>february 24-28, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>ed sheeran</h2>
+									<date>november 10, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>taylor swift</h2>
+									<date>august 10+11, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>2018 sec championship</h2>
+									<date>december 1, 2018</date>
+								</div>
+							</figure>
+						</li>
+						<li class="section-list__page">
+							<figure>
+								<div class="small-gold-bar">
+									<h2>super bowl LIII</h2>
+									<date>february 3, 2019</date>
+								</div>
+							</figure>
+						</li>
+					</ul>
+				</div>
+				<div class="events__cta">
+					<a href="#" class="cta--link">
+						<div>More Upcoming Events</div>
+					</a>
 				</div>
 			</section>
 		</main>
@@ -351,7 +372,7 @@
 		  crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 		<script src="assets/js/jquery.waypoints.js"></script>	
 		<script src="assets/js/main.js"></script>
 	</body>

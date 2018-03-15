@@ -1,5 +1,6 @@
 $white: #FEFEFE;
 $gold: #817246;
+$goldBrown: #584401;
 $goldBright: #bfab6c;
 $goldGlow: #e8ce7b;
 $gray: #D5D5D5;
@@ -15,33 +16,13 @@ $sm-break: 630px;
 $med-break: 900px;
 $lg-break: 1000px;
 
-$smallGapVH: 1.506024096vh;
-$mediumGapVH: 2.259036145vh;
-$largeGapVH: 3.765060241vh;
-$xlGapVH: 7.530120482vh;
-
-$smallGapVW: 2.666666667vw;
-$mediumGapVW: 4vw;
-$largeGapVW: 6.666666667vw;
-$xlGapVW: 13.33333333vw;
-
-$smallGapVHTab: 0.9765625vh;
-$mediumGapVHTab: 1.46484375vh;
-$largeGapVHTab: 2.44140625vh;
-$xlGapVHTab: 4.8828125vh;
-
-$smallGapVWTab: 0.6510416667vw;
-$mediumGapVWTab: 1.953125vw;
-$largeGapVWTab: 3.255208333vw;
-$xlGapVWTab: 6.510416667vw;
-
-$xsBreakMobile: 0.234375rem;
-$smallBreakMobile: 0.46875rem;
-$mediumBreakMobile: 0.9375rem;
-$defaultBreakMobile: 1.40625rem;
-$largeBreakMobile: 2.109375rem;
-$xlBreakMobile: 3.1640625rem;
-$xxlBreakMobile: 5rem;
+$xsGap: 0.5rem;
+$smGap: 0.75rem;
+$mdGap: 1rem;
+$lgGap: 2rem;
+$xlGap: 2.5rem;
+$xxlGap: 3rem;
+$xxxlGap: 3.5rem;
 
 $smallSkew: 2.3deg;
 $mediumSkew: 4deg;

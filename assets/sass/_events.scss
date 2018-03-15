@@ -1,47 +1,37 @@
 #events {
-	.section-header {
-		margin-bottom: -1.6375rem;
-	}
+	margin-bottom: 0;
+	overflow: hidden;
 
-	.section-footer {
-		z-index: 4;
-		margin-top: -1vw;
+	.scrollbox {
+		margin: 0 - $smGap;
 	}
 }
 
 .section-list.section-list--events {
 	flex-direction: row;
 	justify-content: space-around;
-	padding: $xsBreakMobile;
 	position: relative;
 	flex-direction: row;
 	align-items: center;
 	min-width: min-content;
-	padding-left: 4vw;
 	overflow: hidden;
+	padding: $mdGap;
+	padding-right: 500px;
 
 	@include breakpoint(900px) {
-		padding-left: 2vw;
 		min-width: 0;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
+		padding-right: $mdGap;
 	}
 
 	li {
 		position: relative;
-		margin-right: 5vw;
-		transision: .5s all;
-
-		// &:hover {
-		//     transform: scale(1.1);
-		// }
+		margin-left: $lgGap;
+		transition: .5s all;
 
 		@include breakpoint(900px) {
-			margin-right: 3vw;
-
-			// &:nth-child(n+6) {
-			// 	display: none;
-			// }
+			margin-bottom: $lgGap;
 		}
 
 		figure {
@@ -52,7 +42,7 @@
 			text-shadow: 0 0 2px $darkBlue;
 			text-transform: uppercase;
 			font-weight: 800;
-			margin-top: $mediumBreakMobile;
+			// margin-top: $mdGap;
 			@include bgImg('GraveDigger.jpg');			
 
 			@media screen and (min-width: 1200px) {
@@ -73,17 +63,17 @@
 				width: 100%;
 				height: 100%;
 				background-color: $gold;
-				padding: $smallBreakMobile;
+				padding: $smGap;
 			}
 
 			date {
 				@include fontSize(xs);
 				padding-top: 0;
-				padding-bottom: 2vw;
 			}
 
 			h2 {
 				@include fontSize(sm);
+				padding-bottom: $xsGap;
 			}
 		}
 
@@ -110,7 +100,7 @@
 
 		&:nth-child(3) {
 			figure {
-				@include bgImg('stadiumfront.jpg', auto 80%, top left);
+				@include bgImg('stadiumfront.jpg', auto 85%, top left);
 			}
 		}
 
@@ -140,6 +130,57 @@
 		}
 
 	}
+}
+
+#events .events__cta {
+	color: $grey;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	z-index: 4;
+	height: 5rem;
+	@include fontSize(md);
+	padding: $mdGap;
+	margin-top: 0 - $lgGap;
+
+
+	.cta--link {
+		align-self: center;
+		position: relative;
+		padding: 0.7rem;
+		// padding-bottom: 0.45rem;
+		margin-top: -2rem;
+		text-align: right;
+		@include buttonRadius;
+		background-color: $lightRed;
+		@include buttonShadow;
+
+		div {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&:before {
+			@include goldBarShadow;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			background-color: $gold;
+			height: 100vw;
+			width: 100vw;
+			transform: rotate(75deg) translate(-14%, 30%);
+			z-index: -1;
+			border: $thinBorder $darkRed;
+		}
+	}
+
+	
 }
 
 

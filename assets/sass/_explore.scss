@@ -9,6 +9,13 @@
 		position: relative;
 		max-height: 800px;
 		background-color: $darkBlue;
+
+		@include breakpoint(800px) {
+			padding: $lgGap;
+			border: $thinBorder $darkRed;
+			border-right: 0;
+			border-left: 0;
+		}
 	}
 
 	.large-gold-bar {

@@ -6,8 +6,9 @@ header {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: row-reverse;
-	padding: $mediumBreakMobile;
-	padding-bottom: $smallBreakMobile;
+	padding: $mdGap;
+	padding-bottom: $xsGap;
+
 	justify-content: space-between;
 	background-color: $darkBlue;
 	
@@ -45,11 +46,6 @@ header {
 			height: 100%;
 			width: 100%;
 			top: 100%;
-
-			@include breakpoint(1300px) {
-				// transform: rotate(-16deg) translate(-50%);
-				height: 130%;
-			}
 		}
 
 		&:after {
@@ -77,11 +73,6 @@ header {
 				width: 100%;
 				top: 100%;
 				box-shadow: 3px 1px 10px $darkBlue;
-
-				@include breakpoint(1300px) {
-					// transform: rotate(-16deg) translate(-50%);
-					height: 130%;
-				}
 			}
 		}
 	}
@@ -90,25 +81,15 @@ header {
 		@include bgImg("mbs-logo.svg");
 		background-repeat: no-repeat;
 		background-size: 100%;
-		width: 12vw;
-		min-width: 60px;
-		max-width: 130px;
-		height: 6vw;
-		min-height: 30px;
-		max-height: 65px;
+		width: 4rem;
+		height: 2rem;
 		z-index: 11;
 
 		@include breakpoint(725px) {
-			margin: 1vw 1.5vw;
-			margin-bottom: -1.75vw;
-			// width: 80px;
-			// height: 40px;
-			// margin-bottom: 0;
-		}
-
-		@include breakpoint(1000px) {
-			margin: 0.75vw 1vw;
-			margin-bottom: -1.5vw;
+			width: 5.5rem;
+			height: 2.75rem;
+			margin: $smGap $mdGap;
+			margin-bottom: 0 - $smGap;
 		}
 	}
 
@@ -155,26 +136,15 @@ header {
 			color: $white;
 			text-transform: uppercase;
 			text-align: center;
-			font-size: 0.55rem;
+			font-size: $xsGap;
 			letter-spacing: 3px;
 			margin-top: 5px;
 			padding-left: 3px;
-
-			@include breakpoint(500px) {
-				font-size: 0.65rem;
-				letter-spacing: 3.5px;
-			}
-
-			@include breakpoint(600px) {
-				font-size: 0.75rem;
-				letter-spacing: 4px;
-			}
 		}
 	}
 
 	.header__nav {
-		padding-top:  65px;
-		padding-bottom: 35px;
+		padding-top: 5rem;
 		position: absolute;
 		border-bottom: 3px solid $darkRed;
 		width: 100%;
@@ -186,6 +156,7 @@ header {
 		background-color: $darkBlue;
 		color: $goldBright;
 
+
 		@media screen and (min-width: 600px) {
 			display: flex;
 		}
@@ -194,22 +165,20 @@ header {
 		li {
 			display: flex;
 			justify-content: center;
-			margin: 0px 20px;
-			
+			margin: 0 $smGap;
+			@include fontSize(sm);
 			text-transform: uppercase;
 			height: 100%;
+			min-height: 0;
 
 			@include breakpoint(725px) {
 				margin: 0;
+				min-height: 0;
 			}
 
 			a {
 				height: auto;
 				width: auto;
-				padding-top: 28px;
-				// padding-left: 15px;
-				padding-bottom: 5px;
-
 				border-bottom: 2px solid rgba(0, 0, 0, 0);
 				transition: .4s all;
 
@@ -243,6 +212,10 @@ header {
 				transform: none;
 				opacity: 1;
 				visibility: initial;
+			}
+
+			.header__nav_items {
+				min-height: 0;
 			}
 		} 
 
@@ -279,103 +252,3 @@ header {
 		}
 	}
 }
-
-
-
-
-// header {
-	
-
-// 	&:after {
-		
-// 	}
-
-// 	.header__logo {
-		
-
-// 		@include breakpoint(600px) {
-// 			width: 81px;
-// 			height: 36px;
-// 			margin: 10px;
-// 			position: absolute;
-// 		}
-// 	}
-
-// 	.hamburger__button {
-		
-
-// 		@include breakpoint(600px) {
-// 			display: none;
-// 		}
-// 	}
-
-// 	@include breakpoint(600px) {
-// 		flex-direction: row;
-// 		z-index: 11;
-// 		border: 0;
-// 		padding: 0;
-// 		// position: relative;
-// 		border-bottom: $thinBorder $darkRed;
-// 		box-shadow: 0 1px 20px $darkBlue;
-
-// 		&:after {
-// 			top: 0;
-// 			left: 0;
-// 			right: 0;
-// 			bottom: 0;
-// 			transform: none;
-// 			border: none;
-// 			position: absolute;
-// 			// background: transparent;
-// 			z-index: 6;
-// 		}
-		
-// 		&:before, &:after {
-// 			@include skew(-20deg);
-// 			transform-origin: 0%;
-// 		}
-
-// 		&:before {
-// 			z-index: 7;
-// 			border: none;
-// 			background-color: $darkBlue;
-// 			border-bottom: $thinBorder $darkRed;
-// 			box-shadow: 0 1px 20px $darkBlue;
-// 			padding: 42px;
-// 		}
-// 	}
-
-// 	.header__nav {
-		
-
-		
-
-// 		@include breakpoint(600px) {
-// 			flex-direction: row;
-// 			top: 0;
-// 			background-color: transparent;
-// 			// z-index: ;
-// 			position: relative;
-// 			transform: none;
-// 			opacity: 1;
-// 			width: 100%;
-// 			padding: 0;
-// 			height: 35px;
-// 			padding-left: 86px;
-// 			padding-right: $smallBreakMobile;
-// 			justify-content: space-around;
-// 			align-items: center;
-
-// 			li {
-// 				width: initial;
-// 				padding: 0;
-// 				border: 0;
-// 				margin: 0;
-// 			}
-// 		}
-// 	}
-
-// 	@include breakpoint(600px) {
-// 		// box-shadow: 0 1px 20px $darkBlue;
-// 	}
-// }

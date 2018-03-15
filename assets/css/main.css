@@ -48,8 +48,33 @@ table {
 * {
   box-sizing: border-box; }
 
-html {
-  font-size: 16px; }
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 14; } }
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 15; } }
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 16; } }
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 17px; } }
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 18px; } }
+
+@media screen and (min-width: 1100px) {
+  html {
+    font-size: 19px; } }
+
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 20px; } }
 
 html, body {
   height: 100%;
@@ -92,24 +117,24 @@ section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2.10938rem;
+  margin-bottom: 2rem;
   position: relative; }
   section .scrollbox {
     overflow-x: scroll;
     width: 100%; }
   @media screen and (min-width: 600px) {
     section {
-      margin-bottom: 4.88281vh; } }
+      margin-bottom: 2.5rem; } }
 
 main {
   width: 100%;
-  overflow-y: scroll;
   overflow-x: visible; }
 
 .section-header {
   transform: rotate(-2deg);
-  margin-left: 0.9375rem;
-  margin-bottom: -0.9375rem;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  margin-bottom: -1rem;
   z-index: 4;
   color: #D5D5D5;
   text-transform: uppercase;
@@ -119,33 +144,6 @@ main {
   box-shadow: 1px 1px 3px #001622;
   padding-bottom: 0.35rem;
   text-shadow: 1.2px 1.5px 0 #001622; }
-  @media screen and (min-width: 0px) {
-    .section-header {
-      font-size: 1.22rem; } }
-  @media screen and (min-width: 375px) {
-    .section-header {
-      font-size: 1.3rem; } }
-  @media screen and (min-width: 500px) {
-    .section-header {
-      font-size: 1.4rem; } }
-  @media screen and (min-width: 625px) {
-    .section-header {
-      font-size: 1.48rem; } }
-  @media screen and (min-width: 750px) {
-    .section-header {
-      font-size: 1.57rem; } }
-  @media screen and (min-width: 875px) {
-    .section-header {
-      font-size: 1.67rem; } }
-  @media screen and (min-width: 1000px) {
-    .section-header {
-      font-size: 1.75rem; } }
-  @media screen and (min-width: 1125px) {
-    .section-header {
-      font-size: 1.84rem; } }
-  @media screen and (min-width: 1250px) {
-    .section-header {
-      font-size: 1.94rem; } }
   @media screen and (min-width: 900px) {
     .section-header {
       margin-left: 4vw; } }
@@ -157,35 +155,9 @@ main {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: -0.9375rem;
+  margin-top: -1rem;
+  font-size: 1rem;
   text-shadow: 1.2px 1.5px 0 #001622; }
-  @media screen and (min-width: 0px) {
-    .section-footer {
-      font-size: 0.94rem; } }
-  @media screen and (min-width: 375px) {
-    .section-footer {
-      font-size: 1.01rem; } }
-  @media screen and (min-width: 500px) {
-    .section-footer {
-      font-size: 1.08rem; } }
-  @media screen and (min-width: 625px) {
-    .section-footer {
-      font-size: 1.15rem; } }
-  @media screen and (min-width: 750px) {
-    .section-footer {
-      font-size: 1.22rem; } }
-  @media screen and (min-width: 875px) {
-    .section-footer {
-      font-size: 1.29rem; } }
-  @media screen and (min-width: 1000px) {
-    .section-footer {
-      font-size: 1.36rem; } }
-  @media screen and (min-width: 1125px) {
-    .section-footer {
-      font-size: 1.43rem; } }
-  @media screen and (min-width: 1250px) {
-    .section-footer {
-      font-size: 1.5rem; } }
   .section-footer span {
     z-index: 4;
     color: #D5D5D5;
@@ -194,8 +166,7 @@ main {
     background: #A61931;
     padding: 0.65rem 0.55rem 0.5rem 0.55rem;
     box-shadow: 1px 1px 3px #001622;
-    padding-top: 0.9rem;
-    margin-right: 0.9375rem;
+    margin-right: 1rem;
     border-radius: 0.2rem; }
     @media screen and (min-width: 900px) {
       .section-footer span {
@@ -212,8 +183,8 @@ header {
   display: flex;
   align-items: flex-start;
   flex-direction: row-reverse;
-  padding: 0.9375rem;
-  padding-bottom: 0.46875rem;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
   justify-content: space-between;
   background-color: #001622; }
   header .box-shadow {
@@ -252,11 +223,7 @@ header {
         z-index: -1;
         height: 100%;
         width: 100%;
-        top: 100%; } }
-    @media screen and (min-width: 725px) and (min-width: 1300px) {
-      header:before {
-        height: 130%; } }
-  @media screen and (min-width: 725px) {
+        top: 100%; }
       header:after {
         transform: none;
         z-index: -2; }
@@ -278,9 +245,6 @@ header {
           width: 100%;
           top: 100%;
           box-shadow: 3px 1px 10px #001622; } }
-      @media screen and (min-width: 725px) and (min-width: 1300px) {
-        header .box-shadow:before {
-          height: 130%; } }
   header .header__logo {
     background-image: url("../img/mbs-logo.svg");
     background-position: center;
@@ -288,21 +252,15 @@ header {
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 12vw;
-    min-width: 60px;
-    max-width: 130px;
-    height: 6vw;
-    min-height: 30px;
-    max-height: 65px;
+    width: 4rem;
+    height: 2rem;
     z-index: 11; }
     @media screen and (min-width: 725px) {
       header .header__logo {
-        margin: 1vw 1.5vw;
-        margin-bottom: -1.75vw; } }
-    @media screen and (min-width: 1000px) {
-      header .header__logo {
-        margin: 0.75vw 1vw;
-        margin-bottom: -1.5vw; } }
+        width: 5.5rem;
+        height: 2.75rem;
+        margin: 0.75rem 1rem;
+        margin-bottom: -0.75rem; } }
   header .hamburger__button {
     display: flex;
     flex-direction: column;
@@ -336,21 +294,12 @@ header {
       color: #FEFEFE;
       text-transform: uppercase;
       text-align: center;
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       letter-spacing: 3px;
       margin-top: 5px;
       padding-left: 3px; }
-      @media screen and (min-width: 500px) {
-        header .hamburger__button p {
-          font-size: 0.65rem;
-          letter-spacing: 3.5px; } }
-      @media screen and (min-width: 600px) {
-        header .hamburger__button p {
-          font-size: 0.75rem;
-          letter-spacing: 4px; } }
   header .header__nav {
-    padding-top: 65px;
-    padding-bottom: 35px;
+    padding-top: 5rem;
     position: absolute;
     border-bottom: 3px solid #580614;
     width: 100%;
@@ -367,17 +316,18 @@ header {
     header .header__nav li {
       display: flex;
       justify-content: center;
-      margin: 0px 20px;
+      margin: 0 0.75rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      height: 100%; }
+      height: 100%;
+      min-height: 0; }
       @media screen and (min-width: 725px) {
         header .header__nav li {
-          margin: 0; } }
+          margin: 0;
+          min-height: 0; } }
       header .header__nav li a {
         height: auto;
         width: auto;
-        padding-top: 28px;
-        padding-bottom: 5px;
         border-bottom: 2px solid transparent;
         transition: .4s all; }
       header .header__nav li:first-child {
@@ -398,6 +348,8 @@ header {
           transform: none;
           opacity: 1;
           visibility: initial; } }
+      header .header__nav.hidden .header__nav_items {
+        min-height: 0; }
     @media screen and (min-width: 725px) {
       header .header__nav {
         z-index: 12;
@@ -564,14 +516,19 @@ header {
         transform: skewY(3deg);
         z-index: -1; }
 
+.hero {
+  margin-top: 4rem; }
+  @media screen and (min-width: 600px) {
+    .hero {
+      margin-top: 1.5rem; } }
+  @media screen and (min-width: 725px) {
+    .hero {
+      margin-top: 0; } }
+
 .section-list--hero {
-  margin-top: 12vw;
   display: flex;
   justify-content: flex-end;
   overflow-y: hidden; }
-  @media screen and (min-width: 600px) {
-    .section-list--hero {
-      margin-top: 40px; } }
   .section-list--hero .section-list__img {
     height: 100vw;
     width: 100%;
@@ -595,20 +552,25 @@ header {
       justify-content: stretch;
       z-index: 1;
       position: relative; }
+      @media screen and (min-width: 600px) {
+        .section-list--hero .section-list__page .hero__text {
+          margin-top: -1rem; } }
+      @media screen and (min-width: 900px) {
+        .section-list--hero .section-list__page .hero__text {
+          margin: 0; } }
       .section-list--hero .section-list__page .hero__text .hero__text--text {
         display: flex;
+        margin-top: 0;
         flex-direction: column;
-        padding: 4vw 0vw 6vw 6vw;
-        justify-content: stretch;
+        padding: 1rem;
+        padding-top: 0.75rem;
+        justify-content: center;
         align-items: stretch;
         width: 100%;
         background-color: #001622;
         color: #D5D5D5;
         border-bottom: 3px solid #580614;
         font-weight: 100; }
-        @media screen and (min-width: 500px) {
-          .section-list--hero .section-list__page .hero__text .hero__text--text {
-            padding: 2vw 0vw 4vw 4vw; } }
         @media screen and (min-width: 600px) {
           .section-list--hero .section-list__page .hero__text .hero__text--text {
             flex-direction: row;
@@ -616,105 +578,44 @@ header {
             align-items: center; } }
         @media screen and (min-width: 725px) {
           .section-list--hero .section-list__page .hero__text .hero__text--text {
-            padding: 2vw;
-            justify-content: space-around; } }
+            justify-content: space-around;
+            padding-top: 0; } }
         @media screen and (min-width: 900px) {
           .section-list--hero .section-list__page .hero__text .hero__text--text {
             flex-direction: column;
             align-items: flex-end;
             justify-content: stretch;
-            padding: 1vw;
-            padding-bottom: 2vw;
-            padding-top: 0;
             text-align: right; } }
         .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
           display: flex;
           flex-direction: column;
-          margin-bottom: 4vw; }
-          @media screen and (min-width: 500px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
-              margin-bottom: 3vw; } }
+          margin-bottom: 1rem; }
           @media screen and (min-width: 600px) {
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
               margin-bottom: 0; } }
           @media screen and (min-width: 900px) {
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
               margin: 0;
-              align-items: flex-end;
-              margin-bottom: -4vw;
-              transform: translateY(-4vw);
-              margin-right: 20px; } }
-          @media screen and (min-width: 1300px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header {
-              transform: translateY(-6vw);
-              margin-bottom: -6vw; } }
+              align-items: flex-end; } }
           .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-            margin-bottom: 1vw;
-            margin-top: -2vw; }
-            @media screen and (min-width: 0px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.35rem; } }
-            @media screen and (min-width: 375px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.45rem; } }
-            @media screen and (min-width: 500px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.55rem; } }
-            @media screen and (min-width: 625px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.65rem; } }
-            @media screen and (min-width: 750px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.75rem; } }
-            @media screen and (min-width: 875px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.85rem; } }
-            @media screen and (min-width: 1000px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 1.95rem; } }
-            @media screen and (min-width: 1125px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 2.05rem; } }
-            @media screen and (min-width: 1250px) {
-              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                font-size: 2.15rem; } }
+            margin-bottom: 0.5rem;
+            margin-top: -0.25rem;
+            font-size: 1.6rem; }
             @media screen and (min-width: 725px) {
               .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                margin-top: 0;
-                margin-bottom: 0.5vw; } }
+                margin-top: 0; } }
             @media screen and (min-width: 900px) {
               .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header h1 {
-                margin-bottom: 0.25vw; } }
-          @media screen and (min-width: 0px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 0.94rem; } }
-          @media screen and (min-width: 375px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.01rem; } }
-          @media screen and (min-width: 500px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.08rem; } }
-          @media screen and (min-width: 625px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.15rem; } }
-          @media screen and (min-width: 750px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.22rem; } }
-          @media screen and (min-width: 875px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.29rem; } }
-          @media screen and (min-width: 1000px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.36rem; } }
-          @media screen and (min-width: 1125px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.43rem; } }
-          @media screen and (min-width: 1250px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              font-size: 1.5rem; } }
-          @media screen and (min-width: 900px) {
-            .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
-              margin-right: 0.5vw; } }
+                margin-bottom: 0.25vw;
+                position: absolute;
+                margin-bottom: 0.5rem;
+                bottom: 100%;
+                width: 100%; } }
+          .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+            font-size: 1rem; }
+            @media screen and (min-width: 900px) {
+              .section-list--hero .section-list__page .hero__text .hero__text--text .hero__header p {
+                margin-right: 0.5vw; } }
         .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links {
           display: flex;
           flex-wrap: nowrap;
@@ -723,13 +624,14 @@ header {
           text-transform: uppercase; }
           @media screen and (min-width: 900px) {
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links {
-              margin-top: 2vw;
-              margin-right: 20px; } }
+              margin-top: 0.75rem;
+              margin-left: 0.75rem; } }
           .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li {
             margin-right: 5vw;
             display: flex;
             flex-wrap: nowrap;
-            justify-content: stretch;
+            justify-content: center;
+            text-align: center;
             align-items: center;
             text-transform: uppercase; }
             @media screen and (min-width: 900px) {
@@ -737,35 +639,10 @@ header {
                 margin-right: 0;
                 margin-left: 5vw; } }
             .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
+              font-size: 1.3rem;
+              color: #bfab6c;
               border-bottom: 4px solid #A61931;
               transition: .4s all; }
-              @media screen and (min-width: 0px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.08rem; } }
-              @media screen and (min-width: 375px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.16rem; } }
-              @media screen and (min-width: 500px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.24rem; } }
-              @media screen and (min-width: 625px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.32rem; } }
-              @media screen and (min-width: 750px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.4rem; } }
-              @media screen and (min-width: 875px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.48rem; } }
-              @media screen and (min-width: 1000px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.56rem; } }
-              @media screen and (min-width: 1125px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.64rem; } }
-              @media screen and (min-width: 1250px) {
-                .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a {
-                  font-size: 1.72rem; } }
               .section-list--hero .section-list__page .hero__text .hero__text--text .hero__links li a:hover {
                 border-bottom: 4px solid #FEFEFE; }
       .section-list--hero .section-list__page .hero__text .hero__angles {
@@ -790,12 +667,12 @@ header {
           border-bottom: 3px solid #580614;
           top: -3px;
           z-index: -2; }
-          @media screen and (min-width: 725px) {
+          @media screen and (min-width: 900px) {
             .section-list--hero .section-list__page .hero__text .hero__angles:before {
               transform: none; } }
         .section-list--hero .section-list__page .hero__text .hero__angles:after {
           display: none; }
-          @media screen and (min-width: 725px) {
+          @media screen and (min-width: 900px) {
             .section-list--hero .section-list__page .hero__text .hero__angles:after {
               display: block;
               top: -5px;
@@ -807,38 +684,37 @@ header {
               background-color: #001622;
               border-top: 3px solid #580614;
               z-index: -1;
-              transform: translateX(70%) rotate(-12deg);
+              transform: translateX(45%) rotate(-12deg);
               transform-origin: 0%;
               height: 200%; } }
-          @media screen and (min-width: 900px) {
+          @media screen and (min-width: 1400px) {
             .section-list--hero .section-list__page .hero__text .hero__angles:after {
-              transform: translateX(40%) rotate(-12deg);
+              transform: translateX(60%) rotate(-12deg);
               height: 1000%; } }
+
+@media screen and (min-width: 900px) {
+  .news .scrollbox {
+    margin: -0.75rem 0; } }
 
 .section-list.section-list--news {
   position: relative;
   flex-direction: row;
   align-items: center;
   min-width: min-content;
-  padding-left: 4vw; }
+  padding-left: 2rem; }
   @media screen and (min-width: 900px) {
     .section-list.section-list--news {
       min-width: 0;
       flex-wrap: wrap;
-      padding-left: 2vw;
-      justify-content: center;
-      margin-bottom: -3vw; } }
+      justify-content: center; } }
   .section-list.section-list--news li {
-    margin-right: 4vw; }
+    margin-right: 2rem; }
     .section-list.section-list--news li:nth-child(n+10) {
       display: none; }
-    @media screen and (min-width: 600px) {
-      .section-list.section-list--news li {
-        margin-right: 3vw; } }
     @media screen and (min-width: 900px) {
       .section-list.section-list--news li {
-        margin-right: 2vw;
-        margin-bottom: 3vw; }
+        margin: 0.75rem;
+        margin-bottom: 0.5rem; }
         .section-list.section-list--news li:last-child {
           align-self: flex-start; }
         .section-list.section-list--news li:nth-child(n+7) {
@@ -846,8 +722,6 @@ header {
     .section-list.section-list--news li figure {
       height: 70vw;
       width: 77vw;
-      max-height: 300px;
-      max-width: 400px;
       background-image: url("../img/taylor-swift.jpg");
       background-position: center;
       background-size: cover;
@@ -862,10 +736,11 @@ header {
           background: #A61931;
           opacity: .7; }
       .section-list.section-list--news li figure h2 {
+        font-size: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0.9375rem;
+        padding: 1rem;
         text-align: center;
         height: 100%;
         width: 100%;
@@ -875,36 +750,14 @@ header {
         text-shadow: 0 0 5px black;
         line-height: 2rem;
         font-weight: 500; }
-        @media screen and (min-width: 0px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.08rem; } }
-        @media screen and (min-width: 375px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.16rem; } }
-        @media screen and (min-width: 500px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.24rem; } }
-        @media screen and (min-width: 625px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.32rem; } }
-        @media screen and (min-width: 750px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.4rem; } }
-        @media screen and (min-width: 875px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.48rem; } }
-        @media screen and (min-width: 1000px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.56rem; } }
-        @media screen and (min-width: 1125px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.64rem; } }
-        @media screen and (min-width: 1250px) {
-          .section-list.section-list--news li figure h2 {
-            font-size: 1.72rem; } }
+      @media screen and (min-width: 600px) {
+        .section-list.section-list--news li figure {
+          max-height: 25rem;
+          max-width: 30rem; } }
       @media screen and (min-width: 900px) {
         .section-list.section-list--news li figure {
-          width: 30vw; } }
+          max-height: 20rem;
+          max-width: 24rem; } }
     .section-list.section-list--news li:nth-child(2) figure {
       background-image: url("../img/arthur-blank.jpg");
       background-position: center;
@@ -940,561 +793,420 @@ header {
     position: relative;
     max-height: 800px;
     background-color: #001622; }
+    @media screen and (min-width: 800px) {
+      .explore video {
+        padding: 2rem;
+        border: 3px solid #580614;
+        border-right: 0;
+        border-left: 0; } }
   .explore .large-gold-bar {
     position: relative;
     z-index: 2; }
 
 .teams {
-  width: 100%;
-  min-width: 320px;
+  max-width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  position: relative;
-  color: #001622; }
-  @media screen and (min-width: 550px) {
+  justify-content: stretch;
+  align-items: stretch;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem; }
+  @media screen and (min-width: 1000px) {
     .teams {
       flex-direction: row-reverse; } }
-  .teams .teams-diamonds {
-    display: none; }
-    @media screen and (min-width: 550px) {
-      .teams .teams-diamonds {
-        z-index: 1;
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #D5D5D5;
-        width: 100%;
-        overflow: hidden; }
-        .teams .teams-diamonds:before, .teams .teams-diamonds:after {
-          height: 50vw;
-          width: 50vw;
-          background-color: #003950;
-          content: '';
-          position: absolute;
-          z-index: 2; }
-        .teams .teams-diamonds:before {
-          left: 0vw;
-          transform: translate(-70%, -55%) rotate(-57.5deg) skew(-28deg);
-          top: 50%; }
-        .teams .teams-diamonds:after {
-          right: 0vw;
-          transform: translate(70%, 45%) rotate(57.5deg) skew(28deg);
-          bottom: 50%; } }
-    @media screen and (min-width: 800px) {
-      .teams .teams-diamonds:before {
-        left: -2.5vw; }
-      .teams .teams-diamonds:after {
-        right: -2.5vw; } }
-    @media screen and (min-width: 1000px) {
-      .teams .teams-diamonds:before {
-        left: -5vw; }
-      .teams .teams-diamonds:after {
-        right: -5vw; } }
-    @media screen and (min-width: 1400px) {
-      .teams .teams-diamonds:before {
-        left: -7.5vw; }
-      .teams .teams-diamonds:after {
-        right: -7.5vw; } }
   .teams .teams-section {
-    background-color: #D5D5D5;
-    width: 100%;
     position: relative;
-    justify-content: flex-start;
-    padding: 0.9375rem;
-    margin-bottom: 5rem;
-    padding-bottom: 0;
+    background-color: #D5D5D5;
     display: flex;
     flex-direction: column;
-    padding: 6vw 3vw; }
-    @media screen and (min-width: 550px) {
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-bottom: 2.5rem; }
+    @media screen and (min-width: 1000px) {
       .teams .teams-section {
-        width: 50%;
-        position: relative;
-        justify-content: flex-start;
-        margin-bottom: 0;
-        background-size: auto 85%;
-        background-color: transparent;
-        z-index: 3; } }
-    .teams .teams-section:before {
-      background-color: #D5D5D5;
-      display: none; }
-    .teams .teams-section h2 {
+        width: 50%; } }
+    .teams .teams-section:before, .teams .teams-section:after {
+      height: 9rem;
+      width: 9rem;
+      content: '';
+      position: absolute;
+      display: none;
+      z-index: 1; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section:before, .teams .teams-section:after {
+          height: 14rem;
+          width: 14rem; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section:before, .teams .teams-section:after {
+          height: 10rem;
+          width: 10rem; } }
+    .teams .teams-section.teams-section__falcons {
+      padding-left: 1rem; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__falcons {
+          padding-left: 0;
+          align-items: flex-start; } }
+      .teams .teams-section.teams-section__falcons:after {
+        background-color: #580614;
+        display: block;
+        right: 0;
+        transform: rotate(-55deg) skew(-20deg) translate(25%, 71%); }
+    .teams .teams-section.teams-section__united {
+      padding-right: 1rem; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united {
+          padding-right: 0;
+          align-items: flex-end; } }
+      .teams .teams-section.teams-section__united:before {
+        background-color: #817246;
+        display: block;
+        left: 0;
+        transform: rotate(-55deg) skew(-20deg) rotateZ(90deg) translate(-25%, 71%); }
+    .teams .teams-section .teams__figure {
+      z-index: 4;
+      height: 100%;
+      width: 30%;
+      margin-bottom: 0.5%; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section .teams__figure {
+          width: 35%; } }
+    .teams .teams-section.teams-section__falcons .teams__figure {
+      align-self: flex-end;
+      background-image: url("../img/hero_img_1.png");
+      background-position: center;
+      background-size: auto 95%;
+      background-repeat: no-repeat;
+      margin-left: -10%; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__falcons .teams__figure {
+          background-size: auto 85%; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section.teams-section__falcons .teams__figure {
+          margin-right: -3%; } }
+    .teams .teams-section.teams-section__united .teams__figure {
+      order: -1;
+      align-self: flex-start;
+      background-image: url("../img/hero_img_2.png");
+      background-position: center;
+      background-size: auto 95%;
+      background-repeat: no-repeat;
+      margin-right: -2.5%; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united .teams__figure {
+          background-size: auto 85%; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section.teams-section__united .teams__figure {
+          margin-right: -8%;
+          margin-left: -4%; } }
+    .teams .teams-section .next-game {
       display: flex;
+      flex-direction: column;
       text-transform: uppercase;
-      color: #D5D5D5;
-      width: 100%;
-      margin-top: -3.16406rem; }
-      @media screen and (min-width: 550px) {
-        .teams .teams-section h2 {
-          margin-top: -25%; } }
-      .teams .teams-section h2 div {
+      border: 4px solid transparent;
+      padding: 1.5vw;
+      padding-bottom: 0.5vw;
+      margin-top: -1rem; }
+      @media screen and (min-width: 400px) {
+        .teams .teams-section .next-game {
+          position: absolute;
+          top: 4rem;
+          margin-top: 0; } }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section .next-game {
+          position: static;
+          margin-bottom: 0;
+          top: initial; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section .next-game {
+          margin-top: 4rem; } }
+      .teams .teams-section .next-game .next-game__date {
+        font-size: 0.5rem;
+        padding: 1.5vw;
+        padding-bottom: 0;
+        color: #001622; }
+      .teams .teams-section .next-game .next-game__team {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 0.9rem 0.6rem 0.5rem 0.65rem;
+        line-height: 1.7rem;
+        font-size: 2.2rem; }
+        .teams .teams-section .next-game .next-game__team sup {
+          font-size: 0.75rem;
+          padding-bottom: 0.3rem; }
+    .teams .teams-section .next-game__purchase {
+      width: 100%;
+      background-color: #001622;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      border-bottom: 3px solid #580614;
+      font-weight: 100;
+      font-weight: 200; }
+      .teams .teams-section .next-game__purchase button {
+        border-radius: 0.2rem;
+        z-index: 4;
+        color: #D5D5D5;
+        text-transform: uppercase;
+        letter-spacing: 0.07rem;
+        background: #A61931;
+        padding: 0.65rem 0.55rem 0.5rem 0.55rem;
         box-shadow: 1px 1px 3px #001622;
-        color: #001622;
-        letter-spacing: 0.1rem;
-        min-width: 36%; }
-        @media screen and (min-width: 0px) {
-          .teams .teams-section h2 div {
-            font-size: 0.94rem; } }
-        @media screen and (min-width: 375px) {
-          .teams .teams-section h2 div {
-            font-size: 1.01rem; } }
-        @media screen and (min-width: 500px) {
-          .teams .teams-section h2 div {
-            font-size: 1.08rem; } }
-        @media screen and (min-width: 625px) {
-          .teams .teams-section h2 div {
-            font-size: 1.15rem; } }
-        @media screen and (min-width: 750px) {
-          .teams .teams-section h2 div {
-            font-size: 1.22rem; } }
-        @media screen and (min-width: 875px) {
-          .teams .teams-section h2 div {
-            font-size: 1.29rem; } }
-        @media screen and (min-width: 1000px) {
-          .teams .teams-section h2 div {
-            font-size: 1.36rem; } }
-        @media screen and (min-width: 1125px) {
-          .teams .teams-section h2 div {
-            font-size: 1.43rem; } }
-        @media screen and (min-width: 1250px) {
-          .teams .teams-section h2 div {
-            font-size: 1.5rem; } }
-        @media screen and (min-width: 400px) {
-          .teams .teams-section h2 div {
-            min-width: 32%; } }
-        .teams .teams-section h2 div .teams-header {
-          font-weight: 800;
-          color: #D5D5D5;
-          letter-spacing: 0.2rem;
-          margin-top: 0.23438rem; }
-          @media screen and (min-width: 0px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 1.49rem; } }
-          @media screen and (min-width: 375px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 1.59rem; } }
-          @media screen and (min-width: 500px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 1.71rem; } }
-          @media screen and (min-width: 625px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 1.81rem; } }
-          @media screen and (min-width: 750px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 1.93rem; } }
-          @media screen and (min-width: 875px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 2.04rem; } }
-          @media screen and (min-width: 1000px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 2.15rem; } }
-          @media screen and (min-width: 1125px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 2.25rem; } }
-          @media screen and (min-width: 1250px) {
-            .teams .teams-section h2 div .teams-header {
-              font-size: 2.37rem; } }
-        @media screen and (min-width: 550px) {
-          .teams .teams-section h2 div {
-            min-width: 56%; } }
-        @media screen and (min-width: 900px) {
-          .teams .teams-section h2 div {
-            min-width: 50%; } }
-    .teams .teams-section .teams-text {
-      display: flex;
-      flex-direction: column; }
-      @media screen and (min-width: 400px) {
-        .teams .teams-section .teams-text {
-          margin: 0 3vw; } }
-      @media screen and (min-width: 550px) {
-        .teams .teams-section .teams-text {
-          margin: 0; } }
-      .teams .teams-section .teams-text li {
-        margin-bottom: 2.10938rem;
-        display: flex;
-        flex-direction: column; }
-        .teams .teams-section .teams-text li .main-copy {
-          max-width: 150px;
-          margin-top: 3vw; }
-          @media screen and (min-width: 0px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 0.94rem; } }
-          @media screen and (min-width: 375px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.01rem; } }
-          @media screen and (min-width: 500px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.08rem; } }
-          @media screen and (min-width: 625px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.15rem; } }
-          @media screen and (min-width: 750px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.22rem; } }
-          @media screen and (min-width: 875px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.29rem; } }
-          @media screen and (min-width: 1000px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.36rem; } }
-          @media screen and (min-width: 1125px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.43rem; } }
-          @media screen and (min-width: 1250px) {
-            .teams .teams-section .teams-text li .main-copy {
-              font-size: 1.5rem; } }
-          @media screen and (min-width: 400px) {
-            .teams .teams-section .teams-text li .main-copy {
-              max-width: 200px; } }
-          @media screen and (min-width: 550px) {
-            .teams .teams-section .teams-text li .main-copy {
-              min-height: 190px;
-              max-width: 150px; } }
-          @media screen and (min-width: 700px) {
-            .teams .teams-section .teams-text li .main-copy {
-              max-width: 210px;
-              min-height: 170px; } }
-          @media screen and (min-width: 800px) {
-            .teams .teams-section .teams-text li .main-copy {
-              max-width: 225px;
-              min-height: 150px; } }
-          @media screen and (min-width: 900px) {
-            .teams .teams-section .teams-text li .main-copy {
-              min-height: 180px;
-              min-height: 220px; } }
-          @media screen and (min-width: 1000px) {
-            .teams .teams-section .teams-text li .main-copy {
-              min-height: 150px;
-              max-width: 340px; } }
-        .teams .teams-section .teams-text li .teams-cta {
-          display: flex;
-          flex-direction: column;
-          margin-top: 0.46875rem; }
-          .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-            font-style: italic;
-            font-weight: 800;
-            padding: 0 0.1rem; }
-            @media screen and (min-width: 0px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.35rem; } }
-            @media screen and (min-width: 375px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.45rem; } }
-            @media screen and (min-width: 500px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.55rem; } }
-            @media screen and (min-width: 625px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.65rem; } }
-            @media screen and (min-width: 750px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.75rem; } }
-            @media screen and (min-width: 875px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.85rem; } }
-            @media screen and (min-width: 1000px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 1.95rem; } }
-            @media screen and (min-width: 1125px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 2.05rem; } }
-            @media screen and (min-width: 1250px) {
-              .teams .teams-section .teams-text li .teams-cta .teams-slogan {
-                font-size: 2.15rem; } }
-        .teams .teams-section .teams-text li .next-game {
-          display: flex;
-          flex-direction: column; }
-          .teams .teams-section .teams-text li .next-game span, .teams .teams-section .teams-text li .next-game date {
-            text-transform: uppercase; }
-          .teams .teams-section .teams-text li .next-game span {
-            margin-bottom: 0.23438rem; }
-            @media screen and (min-width: 0px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 0.94rem; } }
-            @media screen and (min-width: 375px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.01rem; } }
-            @media screen and (min-width: 500px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.08rem; } }
-            @media screen and (min-width: 625px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.15rem; } }
-            @media screen and (min-width: 750px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.22rem; } }
-            @media screen and (min-width: 875px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.29rem; } }
-            @media screen and (min-width: 1000px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.36rem; } }
-            @media screen and (min-width: 1125px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.43rem; } }
-            @media screen and (min-width: 1250px) {
-              .teams .teams-section .teams-text li .next-game span {
-                font-size: 1.5rem; } }
-            .teams .teams-section .teams-text li .next-game span:first-child {
-              display: flex;
-              align-items: center;
-              padding: 0.1rem;
-              padding-top: 0.25rem;
-              padding-bottom: 0;
-              margin-bottom: 0.46875rem; }
-            .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-              font-weight: 800;
-              margin-bottom: 0; }
-              @media screen and (min-width: 0px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 2.7rem; } }
-              @media screen and (min-width: 375px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 2.9rem; } }
-              @media screen and (min-width: 500px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 3.1rem; } }
-              @media screen and (min-width: 625px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 3.3rem; } }
-              @media screen and (min-width: 750px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 3.5rem; } }
-              @media screen and (min-width: 875px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 3.7rem; } }
-              @media screen and (min-width: 1000px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 3.9rem; } }
-              @media screen and (min-width: 1125px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 4.1rem; } }
-              @media screen and (min-width: 1250px) {
-                .teams .teams-section .teams-text li .next-game span:nth-child(2) {
-                  font-size: 4.3rem; } }
-          @media screen and (min-width: 0px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.68rem; } }
-          @media screen and (min-width: 375px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.72rem; } }
-          @media screen and (min-width: 500px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.78rem; } }
-          @media screen and (min-width: 625px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.82rem; } }
-          @media screen and (min-width: 750px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.88rem; } }
-          @media screen and (min-width: 875px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.93rem; } }
-          @media screen and (min-width: 1000px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 0.97rem; } }
-          @media screen and (min-width: 1125px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 1.02rem; } }
-          @media screen and (min-width: 1250px) {
-            .teams .teams-section .teams-text li .next-game date {
-              font-size: 1.07rem; } }
-        .teams .teams-section .teams-text li button {
-          text-transform: uppercase;
-          color: #D5D5D5;
-          padding: 0.7rem;
-          padding-top: 0.9rem;
-          padding-bottom: 0.5rem;
-          border-radius: 5px;
-          box-shadow: 1px 1px 3px #001622; }
-          @media screen and (min-width: 0px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 0.94rem; } }
-          @media screen and (min-width: 375px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.01rem; } }
-          @media screen and (min-width: 500px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.08rem; } }
-          @media screen and (min-width: 625px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.15rem; } }
-          @media screen and (min-width: 750px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.22rem; } }
-          @media screen and (min-width: 875px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.29rem; } }
-          @media screen and (min-width: 1000px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.36rem; } }
-          @media screen and (min-width: 1125px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.43rem; } }
-          @media screen and (min-width: 1250px) {
-            .teams .teams-section .teams-text li button {
-              font-size: 1.5rem; } }
-        .teams .teams-section .teams-text li:last-child {
-          margin-bottom: 0; }
-          .teams .teams-section .teams-text li:last-child button {
-            background-color: #001622;
-            color: #D5D5D5;
-            box-shadow: 1px 1px 3px #001622; }
-            @media screen and (min-width: 0px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 0.94rem; } }
-            @media screen and (min-width: 375px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.01rem; } }
-            @media screen and (min-width: 500px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.08rem; } }
-            @media screen and (min-width: 625px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.15rem; } }
-            @media screen and (min-width: 750px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.22rem; } }
-            @media screen and (min-width: 875px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.29rem; } }
-            @media screen and (min-width: 1000px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.36rem; } }
-            @media screen and (min-width: 1125px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.43rem; } }
-            @media screen and (min-width: 1250px) {
-              .teams .teams-section .teams-text li:last-child button {
-                font-size: 1.5rem; } }
-    .teams .teams-section.teams-section__falcons {
-      background-image: url("../img/hero_img_1.png");
-      background-position: 95% center;
-      background-size: auto 95%;
-      background-repeat: no-repeat; }
-      @media screen and (min-width: 400px) {
-        .teams .teams-section.teams-section__falcons {
-          padding-left: 5vw; } }
-      @media screen and (min-width: 550px) {
-        .teams .teams-section.teams-section__falcons {
-          padding-left: 2.5vw;
-          background-position: 150% center; } }
-      @media screen and (min-width: 650px) {
-        .teams .teams-section.teams-section__falcons {
-          background-position: 130% center; } }
-      @media screen and (min-width: 700px) {
-        .teams .teams-section.teams-section__falcons {
-          background-position: 115% center; } }
-      @media screen and (min-width: 800px) {
-        .teams .teams-section.teams-section__falcons {
-          background-position: 95% center; } }
-      .teams .teams-section.teams-section__falcons:before {
-        transform: skewY(-3deg);
-        transform-origin: 100%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        transform-origin: 0; }
-      .teams .teams-section.teams-section__falcons h2 div, .teams .teams-section.teams-section__falcons .teams-cta button {
-        background-color: #A61931; }
-      .teams .teams-section.teams-section__falcons .teams-text {
-        align-items: flex-start; }
-    .teams .teams-section.teams-section__united {
-      background-image: url("../img/hero_img_2.png");
-      background-position: 5% center;
-      background-size: auto 95%;
-      background-repeat: no-repeat; }
-      @media screen and (min-width: 400px) {
-        .teams .teams-section.teams-section__united {
-          padding-right: 5vw; } }
-      @media screen and (min-width: 550px) {
-        .teams .teams-section.teams-section__united {
-          padding-right: 2.5vw;
-          background-position: -50% center; } }
-      @media screen and (min-width: 650px) {
-        .teams .teams-section.teams-section__united {
-          background-position: -30% center; } }
-      @media screen and (min-width: 700px) {
-        .teams .teams-section.teams-section__united {
-          background-position: -15% center; } }
-      @media screen and (min-width: 800px) {
-        .teams .teams-section.teams-section__united {
-          background-position: 2.5% center; } }
-      .teams .teams-section.teams-section__united:before {
-        transform: skewY(3deg);
-        transform-origin: 100%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1; }
-      .teams .teams-section.teams-section__united .next-game span {
-        justfiy-content: flex-end; }
-    .teams .teams-section.teams-section__united h2 {
-      flex-direction: row-reverse; }
-      .teams .teams-section.teams-section__united h2 div {
-        background-color: #817246;
-        align-items: flex-end; }
-    .teams .teams-section.teams-section__united .teams-text li {
-      align-items: flex-end;
+        padding-top: 0.35rem; }
+    .teams .teams-section.teams-section__falcons .next-game {
+      align-self: flex-end;
+      text-align: right;
+      border-right: 4px solid #A61931;
+      right: 26%; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__falcons .next-game {
+          right: 0; } }
+      .teams .teams-section.teams-section__falcons .next-game date {
+        transform: translate(-25%); }
+    .teams .teams-section.teams-section__falcons .next-game__team {
+      color: #A61931; }
+      .teams .teams-section.teams-section__falcons .next-game__team sup {
+        color: #001622; }
+    .teams .teams-section.teams-section__falcons .next-game__purchase {
+      text-align: left; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__falcons .next-game__purchase {
+          padding-left: 4rem; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section.teams-section__falcons .next-game__purchase {
+          text-align: right;
+          padding-right: 30%;
+          padding-left: 0; } }
+    .teams .teams-section.teams-section__united .next-game {
+      align-self: flex-start;
+      text-align: left;
+      color: #817246;
+      border-left: 4px solid #817246;
+      left: 24%; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united .next-game {
+          left: 0; } }
+      .teams .teams-section.teams-section__united .next-game sup {
+        color: #001622; }
+      .teams .teams-section.teams-section__united .next-game date {
+        transform: translate(25%); }
+    .teams .teams-section.teams-section__united .next-game__purchase {
       text-align: right; }
-      .teams .teams-section.teams-section__united .teams-text li div {
-        align-items: flex-end; }
-        .teams .teams-section.teams-section__united .teams-text li div button {
-          background-color: #817246; }
-      .teams .teams-section.teams-section__united .teams-text li h3 span:first-child {
-        border-right: 3px solid #817246;
-        padding-right: 0.9375rem; }
-      .teams .teams-section.teams-section__united .teams-text li h3 span:nth-child(2) {
-        color: #817246; }
-      .teams .teams-section.teams-section__united .teams-text li h3 date {
-        color: #817246; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united .next-game__purchase {
+          padding-right: 4rem; } }
+      @media screen and (min-width: 1200px) {
+        .teams .teams-section.teams-section__united .next-game__purchase {
+          text-align: left;
+          padding-left: 35%;
+          padding-right: 0; } }
+    .teams .teams-section .teams__copy {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 70%; }
+      @media screen and (min-width: 600px) {
+        .teams .teams-section .teams__copy {
+          width: 50%; } }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section .teams__copy {
+          width: 65%; } }
+      .teams .teams-section .teams__copy .copy__body {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem; }
+        @media screen and (min-width: 1200px) {
+          .teams .teams-section .teams__copy .copy__body {
+            width: 65%; } }
+        .teams .teams-section .teams__copy .copy__body h3 {
+          font-size: 1.6rem;
+          font-style: italic; }
+        .teams .teams-section .teams__copy .copy__body .body--text {
+          padding: 0.75rem; }
+          @media screen and (min-width: 400px) {
+            .teams .teams-section .teams__copy .copy__body .body--text {
+              width: 55%; } }
+          @media screen and (min-width: 600px) {
+            .teams .teams-section .teams__copy .copy__body .body--text {
+              width: initial;
+              min-height: 8.5rem; } }
+        .teams .teams-section .teams__copy .copy__body .body--cta {
+          margin: 2.5vw;
+          margin-top: 0;
+          color: #D5D5D5;
+          width: 50%;
+          padding: 0.5rem;
+          font-weight: 100;
+          text-transform: uppercase;
+          align-self: center;
+          background-color: #003950;
+          font-size: 0.75rem;
+          box-shadow: 1px 1px 3px #001622;
+          border-radius: 0.2rem; }
+    .teams .teams-section .teams__title {
+      display: flex;
+      flex-direction: row-reverse;
+      text-transform: uppercase;
+      z-index: 4;
+      min-width: min-content;
+      justify-content: stretch;
+      align-items: center; }
+      .teams .teams-section .teams__title h2 {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-10%);
+        padding: 0.75rem;
+        width: 10rem;
+        color: #D5D5D5;
+        font-size: 1.6rem;
+        box-shadow: 1px 1px 3px #001622;
+        position: absolute;
+        top: -0.75rem; }
+        .teams .teams-section .teams__title h2 sup {
+          font-size: 0.75rem;
+          color: #001622; }
+        @media screen and (min-width: 400px) {
+          .teams .teams-section .teams__title h2 {
+            position: relative;
+            top: 0; } }
+        @media screen and (min-width: 1000px) {
+          .teams .teams-section .teams__title h2 {
+            width: 8rem; } }
+        @media screen and (min-width: 1200px) {
+          .teams .teams-section .teams__title h2 {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            transform: translateY(-5%); } }
+      .teams .teams-section .teams__title .copy__slogan {
+        font-size: 1.3rem;
+        font-style: italic;
+        text-transform: none;
+        padding: 0.5rem;
+        z-index: 1;
+        display: flex;
+        margin-top: 3rem; }
+        @media screen and (min-width: 400px) {
+          .teams .teams-section .teams__title .copy__slogan {
+            align-self: center;
+            color: #bfab6c;
+            position: absolute;
+            width: 100%;
+            margin-top: 0; }
+            .teams .teams-section .teams__title .copy__slogan:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              content: ''; } }
+        @media screen and (min-width: 1200px) {
+          .teams .teams-section .teams__title .copy__slogan {
+            margin-top: 2rem; } }
+    .teams .teams-section.teams-section__united .teams__title h2 {
+      text-align: right;
+      background-color: #817246; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united .teams__title h2 {
+          margin-right: 0.5rem; } }
+    .teams .teams-section.teams-section__united .teams__copy {
+      align-self: flex-end; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__united .teams__copy {
+          align-self: flex-start; } }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__united .copy__slogan {
+        right: 1rem;
+        padding-right: 12rem;
+        justify-content: flex-end; } }
+    @media screen and (min-width: 1000px) {
+      .teams .teams-section.teams-section__united .copy__slogan {
+        padding-right: 9rem; } }
+    .teams .teams-section.teams-section__united .copy__slogan:before {
+      border-bottom: 3px solid #817246;
+      background-color: #003950;
+      z-index: -1; }
+    .teams .teams-section.teams-section__falcons .teams__title {
+      flex-direction: row;
+      margin-top: 0; }
+      .teams .teams-section.teams-section__falcons .teams__title h2 {
+        background-color: #A61931; }
+        @media screen and (min-width: 1000px) {
+          .teams .teams-section.teams-section__falcons .teams__title h2 {
+            margin-left: 0.5rem; } }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__falcons .copy__slogan {
+        right: 0;
+        justify-content: flex-start;
+        left: 1rem;
+        padding-left: 12rem; } }
+    @media screen and (min-width: 1000px) {
+      .teams .teams-section.teams-section__falcons .copy__slogan {
+        padding-left: 9rem; } }
+    .teams .teams-section.teams-section__falcons .copy__slogan:before {
+      border-bottom: 3px solid #817246;
+      background-color: #580614;
+      z-index: -1; }
+      @media screen and (min-width: 1000px) {
+        .teams .teams-section.teams-section__falcons .copy__slogan:before {
+          transform: none; } }
+    @media screen and (min-width: 1200px) {
+      .teams .teams-section.teams-section__falcons .teams__copy {
+        justify-content: flex-end;
+        align-self: flex-end; } }
+    @media screen and (min-width: 1000px) {
+      .teams .teams-section.teams-section__falcons .teams__copy .copy__body {
+        align-self: flex-end; } }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__falcons .teams__copy .copy__body .body--text {
+        align-self: flex-start; } }
+    @media screen and (min-width: 1000px) {
+      .teams .teams-section.teams-section__falcons .teams__copy .copy__body .body--text {
+        text-align: right; } }
+    .teams .teams-section.teams-section__falcons .teams__copy .copy__body .body--cta {
+      background-color: #580614; }
+    @media screen and (min-width: 400px) {
+      .teams .teams-section.teams-section__united .teams__copy .copy__body .body--text {
+        align-self: flex-end; } }
+    @media screen and (min-width: 1200px) {
+      .teams .teams-section.teams-section__united .teams__copy .copy__body {
+        align-self: flex-start;
+        padding-left: 0; } }
+    .teams .teams-section.teams-section__united .teams__copy .copy__body .body--cta {
+      background-color: #584401; }
 
-#events .section-header {
-  margin-bottom: -1.6375rem; }
-
-#events .section-footer {
-  z-index: 4;
-  margin-top: -1vw; }
+#events {
+  margin-bottom: 0;
+  overflow: hidden; }
+  #events .scrollbox {
+    margin: -0.75rem; }
 
 .section-list.section-list--events {
   flex-direction: row;
   justify-content: space-around;
-  padding: 0.23438rem;
   position: relative;
   flex-direction: row;
   align-items: center;
   min-width: min-content;
-  padding-left: 4vw;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 1rem;
+  padding-right: 500px; }
   @media screen and (min-width: 900px) {
     .section-list.section-list--events {
-      padding-left: 2vw;
       min-width: 0;
-      justify-content: center;
-      flex-wrap: wrap; } }
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding-right: 1rem; } }
   .section-list.section-list--events li {
     position: relative;
-    margin-right: 5vw;
-    transision: .5s all; }
+    margin-left: 2rem;
+    transition: .5s all; }
     @media screen and (min-width: 900px) {
       .section-list.section-list--events li {
-        margin-right: 3vw; } }
+        margin-bottom: 2rem; } }
     .section-list.section-list--events li figure {
       height: 58vw;
       min-height: 186px;
@@ -1508,7 +1220,6 @@ header {
       text-shadow: 0 0 2px #001622;
       text-transform: uppercase;
       font-weight: 800;
-      margin-top: 0.9375rem;
       background-image: url("../img/GraveDigger.jpg");
       background-position: center;
       background-size: cover;
@@ -1528,64 +1239,13 @@ header {
         width: 100%;
         height: 100%;
         background-color: #817246;
-        padding: 0.46875rem; }
+        padding: 0.75rem; }
       .section-list.section-list--events li .small-gold-bar date {
-        padding-top: 0;
-        padding-bottom: 2vw; }
-        @media screen and (min-width: 0px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.68rem; } }
-        @media screen and (min-width: 375px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.72rem; } }
-        @media screen and (min-width: 500px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.78rem; } }
-        @media screen and (min-width: 625px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.82rem; } }
-        @media screen and (min-width: 750px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.88rem; } }
-        @media screen and (min-width: 875px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.93rem; } }
-        @media screen and (min-width: 1000px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 0.97rem; } }
-        @media screen and (min-width: 1125px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 1.02rem; } }
-        @media screen and (min-width: 1250px) {
-          .section-list.section-list--events li .small-gold-bar date {
-            font-size: 1.07rem; } }
-      @media screen and (min-width: 0px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 0.94rem; } }
-      @media screen and (min-width: 375px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.01rem; } }
-      @media screen and (min-width: 500px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.08rem; } }
-      @media screen and (min-width: 625px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.15rem; } }
-      @media screen and (min-width: 750px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.22rem; } }
-      @media screen and (min-width: 875px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.29rem; } }
-      @media screen and (min-width: 1000px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.36rem; } }
-      @media screen and (min-width: 1125px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.43rem; } }
-      @media screen and (min-width: 1250px) {
-        .section-list.section-list--events li .small-gold-bar h2 {
-          font-size: 1.5rem; } }
+        font-size: 0.5rem;
+        padding-top: 0; }
+      .section-list.section-list--events li .small-gold-bar h2 {
+        font-size: 0.75rem;
+        padding-bottom: 0.5rem; }
     .section-list.section-list--events li:nth-child(odd) .small-gold-bar {
       text-align: right; }
       .section-list.section-list--events li:nth-child(odd) .small-gold-bar:after {
@@ -1603,7 +1263,7 @@ header {
     .section-list.section-list--events li:nth-child(3) figure {
       background-image: url("../img/stadiumfront.jpg");
       background-position: top left;
-      background-size: auto 80%;
+      background-size: auto 85%;
       background-repeat: no-repeat; }
     .section-list.section-list--events li:nth-child(5) figure {
       background-image: url("../img/ed_sheeran.jpg");
@@ -1626,7 +1286,48 @@ header {
       background-size: cover;
       background-repeat: no-repeat; }
 
+#events .events__cta {
+  color: #D5D5D5;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 4;
+  height: 5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-top: -2rem; }
+  #events .events__cta .cta--link {
+    align-self: center;
+    position: relative;
+    padding: 0.7rem;
+    margin-top: -2rem;
+    text-align: right;
+    border-radius: 0.2rem;
+    background-color: #A61931;
+    box-shadow: 1px 1px 3px #001622; }
+    #events .events__cta .cta--link div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #events .events__cta .cta--link:before {
+      box-shadow: -1px -1px 3px 0px #001622;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: #817246;
+      height: 100vw;
+      width: 100vw;
+      transform: rotate(75deg) translate(-14%, 30%);
+      z-index: -1;
+      border: 3px solid #580614; }
+
 footer {
+  z-index: 5;
   background: #001622;
   display: flex;
   flex-direction: column;
@@ -1665,48 +1366,23 @@ footer {
         flex-wrap: flex-wrap; } }
     footer .footer__text a {
       text-decoration: none;
+      font-size: 0.5rem;
       color: #FEFEFE;
       padding-bottom: 2px;
       line-height: 25px;
       transition: .4s all;
       border-bottom: 2px solid transparent; }
-      @media screen and (min-width: 0px) {
-        footer .footer__text a {
-          font-size: 0.68rem; } }
-      @media screen and (min-width: 375px) {
-        footer .footer__text a {
-          font-size: 0.72rem; } }
-      @media screen and (min-width: 500px) {
-        footer .footer__text a {
-          font-size: 0.78rem; } }
-      @media screen and (min-width: 625px) {
-        footer .footer__text a {
-          font-size: 0.82rem; } }
-      @media screen and (min-width: 750px) {
-        footer .footer__text a {
-          font-size: 0.88rem; } }
-      @media screen and (min-width: 875px) {
-        footer .footer__text a {
-          font-size: 0.93rem; } }
-      @media screen and (min-width: 1000px) {
-        footer .footer__text a {
-          font-size: 0.97rem; } }
-      @media screen and (min-width: 1125px) {
-        footer .footer__text a {
-          font-size: 1.02rem; } }
-      @media screen and (min-width: 1250px) {
-        footer .footer__text a {
-          font-size: 1.07rem; } }
       footer .footer__text a:hover {
         border-bottom: 2px solid #FEFEFE; }
     footer .footer__text .mbs-logo__footer {
       background-image: url(../../assets/img/mbs-logo.svg);
       background-repeat: no-repeat;
-      width: 40%;
-      height: 120px; }
+      height: 4rem;
+      width: 8rem; }
       @media screen and (min-width: 630px) {
         footer .footer__text .mbs-logo__footer {
-          width: 20%; } }
+          height: 6rem;
+          width: 12rem; } }
     footer .footer__text .sitemap,
     footer .footer__text .atlanta-teams,
     footer .footer__text .social-media {
@@ -1740,7 +1416,6 @@ footer {
     font-size: .6rem; }
 
 main {
-  position: relative;
-  padding-bottom: 3.16406rem; }
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,35 +1,56 @@
-console.log("Hello World from main.js!");
 
+let running = false;
+let resizing = false;
 
-//Infowindows swipping in from sides
-// $(".explore").waypoint(function () {
-// 	var myVideo = document.getElementById("explore__video");
-// 	myVideo.play();
-// }, {
-// 	offset: '40%',
-// 	triggerOnce: true,
-// })
+hamburger.addEventListener("click", function () {
 
-// function getvals(per) {
-// 	vals = [1.35, 1.45, 1.55, 1.65, 1.75, 1.85, 1.95, 2.05, 2.15];
-// 	bleh = [];
-// 	for (var i = 0; i < vals.length; i++) {
-// 		val = vals[i]*per;
-// 		val = val.toFixed(2);
-// 		val = parseFloat(val);
-// 		bleh.push(val);
-// 	}
+	let open = function() {
+		running = true;
+		headerNav.classList.remove('hidden');
+		TweenMax.staggerTo(".header__nav_items", 
+			.5, {
+				minHeight: '2rem',
+			}, 0, function() { running = false });
+	}
 
-// 	console.log(bleh);
-// }
+	let close = function() {
+		running = true;
+		function hideNav() {
+			headerNav.classList.add('hidden');
+			running = false;
+		}
 
-// var hamburgerMenu = document.querySelector(".hamburger__button");
-// hamburgerMenu.addEventListener("click", function () {
-// 	console.log("clicked");
-// 	let hiddenNav = document.querySelector(".header__nav");
-// 	hiddenNav.classList.toggle("hidden");
-// 	TweenMax.staggerFromTo(".header__nav_items", .5, {height: 0}, {height: "5vh"});
-// })
+		TweenMax.staggerTo(".header__nav_items", 
+			.5, {
+				minHeight: 0,
+			}, 0);
+
+		setTimeout(hideNav, 220);
+	}
+
+	return running
+		? null 
+		: headerNav.classList.contains('hidden')
+		? open()
+		: close();
+	
+});
+
+const listSlide = (list) => {
+	console.log('wow');
+	console.log(list);
+
+	TweenMax.staggerFrom(list, 0.2, {
+		left: '+=100vw'
+	}, 0.1);
+}
+
+$('.news').waypoint(function(direction) {
+	console.log('waow');
+	listSlide(document.getElementById('news').children); 
+},{
+	offset: '100%',
+});
 
 
 

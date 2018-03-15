@@ -1,12 +1,19 @@
+.hero {
+	margin-top: 4rem;
+
+	@include breakpoint(600px) {
+		margin-top: 1.5rem;
+	}
+
+	@include breakpoint(725px) {
+		margin-top: 0;
+	}
+}
+
 .section-list--hero {
-	margin-top: 12vw;
 	display: flex;
 	justify-content: flex-end;
 	overflow-y: hidden;
-
-	@include breakpoint(600px) {
-		margin-top: 40px;
-	}
 
 	.section-list__img {
 		height: 100vw;
@@ -33,21 +40,27 @@
 			z-index: 1;
 			position: relative;
 
+			@include breakpoint(600px) {
+				margin-top: 0 - $mdGap;
+			}
+
+			@include breakpoint(900px) {
+				margin: 0;
+			}
+
 			.hero__text--text {
 				display: flex;
+				margin-top: 0;
 				flex-direction: column;
-				padding: 4vw 0vw 6vw 6vw;
-				justify-content: stretch;
+				padding: $mdGap;
+				padding-top: $smGap;
+				justify-content: center;
 				align-items: stretch;
 				width: 100%;
 				background-color: $darkBlue;
 				color: $grey;
 				border-bottom: $thinBorder $darkRed;
 				font-weight: 100;
-
-				@include breakpoint(500px) {
-					padding: 2vw 0vw 4vw 4vw;
-				}
 
 				@include breakpoint(600px) {
 					flex-direction: row;
@@ -56,29 +69,25 @@
 				}
 
 				@include breakpoint(725px) {
-					padding: 2vw;
 					justify-content: space-around;
+					padding-top: 0;
 				}
 
 				@include breakpoint(900px) {
 					flex-direction: column;
 					align-items: flex-end;
 					justify-content: stretch;
-					padding: 1vw;
-					padding-bottom: 2vw;
-					padding-top: 0;
 					text-align: right;
-
 				}
 
 				.hero__header {
 					display: flex;
 					flex-direction: column;
-					margin-bottom: 4vw;
+					margin-bottom: $mdGap;
 
-					@include breakpoint(500px) {
-						margin-bottom: 3vw;
-					}
+					// @include breakpoint(500px) {
+					// 	margin-bottom: 3vw;
+					// }
 
 					@include breakpoint(600px) {
 						margin-bottom: 0;
@@ -87,33 +96,31 @@
 					@include breakpoint(900px) {
 						margin: 0;
 						align-items: flex-end;
-						margin-bottom: -4vw;
-						transform: translateY(-4vw);
-						margin-right: 20px;
-					}
-
-					@include breakpoint(1300px) {
-						transform: translateY(-6vw);
-						margin-bottom: -6vw;
+						// margin-top: 0 - $lgGap;
+						// position: absolute;
+						// top: -100%;
 					}
 
 					h1 {
-						margin-bottom: 1vw;
-						margin-top: -2vw;
+						margin-bottom: $xsGap;
+						margin-top: -0.25rem;
 						@include fontSize(xl);
 
 						@include breakpoint(725px) {
 							margin-top: 0;
-							margin-bottom: 0.5vw;
 						}
 
 						@include breakpoint(900px) {
 							margin-bottom: 0.25vw;
+							position: absolute;
+							margin-bottom: $xsGap;
+							bottom: 100%;
+							width: 100%;
 						}
 					}
 
 					p {
-						@include fontSize(sm);
+						@include fontSize(md);
 						
 						@include breakpoint(900px) {
 							margin-right: 0.5vw;
@@ -129,15 +136,16 @@
 					text-transform: uppercase;
 
 					@include breakpoint(900px) {
-						margin-top: 2vw;        
-						margin-right: 20px;
+						margin-top: $smGap;        
+						margin-left: $smGap;
 					}
 
 					li {
 						margin-right: 5vw;
 						display: flex;
 						flex-wrap: nowrap;
-						justify-content: stretch;
+						justify-content: center;
+						text-align: center;
 						align-items: center;
 						text-transform: uppercase;
 
@@ -147,7 +155,8 @@
 						}
 
 						a {
-							@include fontSize(md);
+							@include fontSize(lg);
+							color: $goldBright;
 							border-bottom: $thickBorder $lightRed;
 							transition: .4s all;
 
@@ -175,7 +184,7 @@
 					top: -3px;
 					z-index: -2;
 					
-					@include breakpoint(725px) {
+					@include breakpoint(900px) {
 						transform: none;
 					}
 					
@@ -184,7 +193,7 @@
 				&:after {
 					display: none;
 
-					@include breakpoint(725px) {
+					@include breakpoint(900px) {
 						display: block;
 						top: -5px;
 						left: 0;
@@ -195,19 +204,15 @@
 						background-color: $darkBlue;
 						border-top: $thinBorder $darkRed;
 						z-index: -1;
-						transform: translateX(70%) rotate(-12deg);
+						transform: translateX(45%) rotate(-12deg);
 						transform-origin: 0%;
 						height: 200%;
 					}
 
-					@include breakpoint(900px) {
-						transform: translateX(40%) rotate(-12deg);
+					@include breakpoint(1400px) {
+						transform: translateX(60%) rotate(-12deg);
 						height: 1000%;
 					}
-				}
-
-				@include breakpoint(725px) {
-					
 				}
 			}
 

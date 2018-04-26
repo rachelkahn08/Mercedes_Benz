@@ -1,7 +1,7 @@
 {
-  "name": "circus-starter",
+  "name": "Mercedes Benz Website",
   "version": "1.1.0",
-  "description": "A good starting point for new Circus students",
+  "description": "Redesign of the new Mercedes Benz Stadium website, home of the Atlanta Falcons and Atlanta United. This is a joint team project with Rachel Kahn.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -16,14 +16,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrissilich/circus-starter.git"
-  },
-  "author": "Chris Silich",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chrissilich/circus-starter/issues"
-  },
-  "homepage": "https://github.com/chrissilich/circus-starter#readme"
+  "author": "@webDevShelly <webDevShelly@gmail.com>",
 }
